@@ -2,49 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services | Vosh Business Solutions</title>
+
+  <!-- Favicon & Fonts -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&family=Red+Hat+Text:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Meta -->
+  <meta name="description" content="Vosh implements nearshoring strategy, BRM-powered CRM/BI, portals, and automation so industrial businesses move faster with clear KPIs and reliable execution." />
+  <meta property="og:title" content="Services | Vosh Business Solutions" />
+  <meta property="og:description" content="Smart strategy. Simple execution. Nearshoring GTM, BRM systems, BI dashboards, portals, and automation for industrial growth." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.github.io/services.html" />
+
   <style>
-    body {
-      font-family: 'Red Hat Text', sans-serif;
-    }
-    .navbar-brand img {
-      max-height: 40px;
-    }
-    .section-title {
-      font-family: 'Red Hat Display', sans-serif;
-      font-size: 1.8rem;
-      color: #AD1403;
-      margin-top: 40px;
-    }
-    .btn-primary {
-      background-color: #F70000;
-      border: none;
-    }
-    .footer {
-      background-color: #000;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-      margin-top: 60px;
-    }
+    :root { --brand:#AD1403; --ink:#1b1b1b; --muted:#6b7280; --line:#e9ecef; }
+    body { font-family:'Red Hat Text',sans-serif; color:var(--ink); }
+    .navbar-brand img { max-height:40px; }
+    .section-title { font-family:'Red Hat Display',sans-serif; font-size:1.9rem; color:var(--brand); margin-top:40px; }
+    .lead { color:#222; }
+    .card { border:1px solid var(--line); border-radius:14px; }
+    .eyebrow { text-transform:uppercase; letter-spacing:.08em; font-size:.8rem; color:var(--muted); }
+    .badge-brand { background:var(--brand); }
+    .btn-primary { background-color:#F70000; border:none; }
+    .btn-outline-dark:hover { background:#000; color:#fff; }
+    .footer { background:#000; color:#fff; padding:28px 0; margin-top:60px; }
+    .check::before { content:"✓ "; color:var(--brand); font-weight:700; }
+    .kpi { font-family:'Red Hat Display',sans-serif; font-size:1.6rem; color:#111; }
+    .muted { color:var(--muted); }
   </style>
+
+  <!-- Schema (Service) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"Vosh Business Solutions",
+    "url":"https://your-domain.github.io/services.html",
+    "areaServed":["United States","Mexico"],
+    "serviceType":[
+      "Nearshoring go-to-market design",
+      "BRM-powered CRM and operating system",
+      "Business intelligence dashboards",
+      "Customer portals and automation"
+    ],
+    "description":"Systems and strategy for industrial businesses: nearshoring GTM, BRM CRM/OS, BI dashboards, customer portals and automation."
+  }
+  </script>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg bg-light border-bottom" aria-label="Primary">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="logo.png" alt="Vosh Logo">
       </a>
-      <div class="collapse navbar-collapse justify-content-end">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navMain" class="collapse navbar-collapse justify-content-end">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
@@ -54,37 +78,232 @@
 
   <!-- Header -->
   <header class="container text-center mt-5">
-    <h1 class="section-title">Our Services</h1>
-    <p class="lead">We help businesses grow by implementing the tools, systems, and strategy that drive long-term impact.</p>
+    <p class="eyebrow mb-1">Services</p>
+    <h1 class="section-title mb-2">Systems that make growth repeatable</h1>
+    <p class="lead">We implement the strategy, tools, and operating cadence that drive long term impact across sales, operations, and customer experience.</p>
+    <div class="mt-2">
+      <span class="badge badge-brand">Houston, TX</span>
+      <span class="badge text-bg-light">U.S. Mexico</span>
+      <span class="badge text-bg-light">Industrial Supply</span>
+      <span class="badge text-bg-light">BRM · BI · Automation</span>
+    </div>
   </header>
 
-  <!-- Service Blocks -->
-  <section class="container mt-4">
-    <div class="row">
-      <div class="col-md-4">
-        <h4 class="text-danger">Sales Strategy & Expansion</h4>
-        <p>We design and implement strategic sales systems using CRM tools tailored for growth. Services include lead tracking, quote automation, pipeline setup, and training to close more deals with less effort.</p>
-        <a href="https://jvosh.com/representations" target="_blank" class="btn btn-primary btn-sm mt-2">Representations in Mexico</a>
+  <!-- Core Services -->
+  <section class="container mt-5">
+    <h2 class="section-title">What we do</h2>
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p-4 h-100">
+          <h5>Sales Strategy and Expansion</h5>
+          <p>Design practical go to market plans and install a project centric CRM OS that speeds RFQ to quote to PO.</p>
+          <ul class="mb-3">
+            <li class="check">Pipeline setup and role based views</li>
+            <li class="check">Quote automation and follow ups</li>
+            <li class="check">Rep and manager dashboards</li>
+          </ul>
+          <a href="https://jvosh.com/representations" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Representations in Mexico</a>
+        </div>
       </div>
-      <div class="col-md-4">
-        <h4 class="text-danger">Process Digitalization</h4>
-        <p>Replace spreadsheets and manual processes with internal apps and automations. We use AppSheet and Power BI to build smart dashboards, approval systems, inventory tools, and more — without needing custom code.</p>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p-4 h-100">
+          <h5>Process Digitalization</h5>
+          <p>Replace spreadsheets with internal apps and clear workflows using AppSheet and Power BI. No heavy custom code.</p>
+          <ul class="mb-0">
+            <li class="check">Approvals and task routing</li>
+            <li class="check">Inventory and release programs</li>
+            <li class="check">KPI standards and audit trails</li>
+          </ul>
+        </div>
       </div>
-      <div class="col-md-4">
-        <h4 class="text-danger">Customer Portals & Automation</h4>
-        <p>We build modern customer-facing platforms to improve the way your business interacts with clients. From order tracking and quote requests to follow-up workflows, we make your company feel 10x more efficient.</p>
-        <a href="https://www.appsheet.com/start/47824b93-3a4e-4218-811c-9c2092a67b41" target="_blank" class="btn btn-primary btn-sm mt-2">Visit BRM Portal</a>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p-4 h-100">
+          <h5>Customer Portals and Automation</h5>
+          <p>Give customers a clean window into quotes, orders, and documents. Automate status updates and next steps.</p>
+          <ul class="mb-3">
+            <li class="check">Quote approvals and status</li>
+            <li class="check">Order history and documents</li>
+            <li class="check">Alerts for changes and delays</li>
+          </ul>
+          <a href="https://www.appsheet.com/start/47824b93-3a4e-4218-811c-9c2092a67b41" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Visit BRM Portal</a>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Outcomes -->
+  <section class="container mt-5">
+    <h2 class="section-title">Outcomes you can expect</h2>
+    <div class="row g-4">
+      <div class="col-12 col-lg-3">
+        <div class="card p-4 h-100 text-center">
+          <div class="kpi">2x+</div>
+          <p class="mb-0">Faster speed to quote with clean margins</p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="card p-4 h-100 text-center">
+          <div class="kpi">>97%</div>
+          <p class="mb-0">Target OTIF support with release programs</p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="card p-4 h-100 text-center">
+          <div class="kpi">90%+</div>
+          <p class="mb-0">Adoption on simplified role based views</p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="card p-4 h-100 text-center">
+          <div class="kpi">Weekly</div>
+          <p class="mb-0">KPI cadence that drives decisions</p>
+        </div>
+      </div>
+    </div>
+    <p class="muted mt-2">Figures are typical targets used to guide design and reviews. Actual results may vary by context and scope.</p>
+  </section>
+
+  <!-- Packages -->
+  <section class="container mt-5">
+    <h2 class="section-title">Packages</h2>
+    <div class="row g-4">
+      <div class="col-12 col-lg-4">
+        <div class="card p-4 h-100">
+          <span class="eyebrow">Starter</span>
+          <h5 class="mt-1">30 to 45 day quick wins</h5>
+          <ul class="mb-3">
+            <li class="check">BRM baseline with pipeline and quotes</li>
+            <li class="check">Core dashboards for reps and managers</li>
+            <li class="check">Customer portal lite</li>
+          </ul>
+          <p class="muted mb-0">Best for teams starting a clean operating cadence.</p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="card p-4 h-100 border-2">
+          <span class="eyebrow">Growth</span>
+          <h5 class="mt-1">90 day operating system</h5>
+          <ul class="mb-3">
+            <li class="check">Automations and approvals</li>
+            <li class="check">Release programs and OTIF tracking</li>
+            <li class="check">Leadership scorecard and reviews</li>
+          </ul>
+          <p class="muted mb-0">Best for scaling teams and binational execution.</p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="card p-4 h-100">
+          <span class="eyebrow">Enterprise</span>
+          <h5 class="mt-1">Custom scope and integrations</h5>
+          <ul class="mb-3">
+            <li class="check">ERP, inventory, and email integration</li>
+            <li class="check">Advanced portals and audit trails</li>
+            <li class="check">Change management and training</li>
+          </ul>
+          <p class="muted mb-0">Best for complex fleets and multi site operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work -->
+  <section class="container mt-5">
+    <h2 class="section-title">How we work</h2>
+    <div class="row g-4">
+      <div class="col-12 col-lg-3">
+        <div class="card p-4 h-100">
+          <span class="eyebrow">G - Groundwork</span>
+          <p class="mb-0">Map workflows and goals. Align KPIs and customer journey. Define owners and cadence.</p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="card p-4 h-100">
+          <span class="eyebrow">R - Rollout</span>
+          <p class="mb-0">Stand up BRM, import data, configure views, and ship quick wins for quotes and portals.</p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="card p-4 h-100">
+          <span class="eyebrow">O - Optimization</span>
+          <p class="mb-0">Automate follow ups, embed dashboards, integrate systems, and tune pipeline quality.</p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="card p-4 h-100">
+          <span class="eyebrow">W - Win and Scale</span>
+          <p class="mb-0">Quarterly reviews, expansion modules, training, and leadership reporting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="container mt-5">
+    <h2 class="section-title">FAQs</h2>
+    <div class="accordion" id="faq">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+            Do you replace our ERP or CRM?
+          </button>
+        </h2>
+        <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faq">
+          <div class="accordion-body">
+            No. We connect to what you already run. The BRM approach makes your CRM and ERP usable for daily execution without adding tool sprawl.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+            How fast can we go live?
+          </button>
+        </h2>
+        <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faq">
+          <div class="accordion-body">
+            Most teams see first wins in 30 to 45 days. We then iterate with integrations, portals, and advanced reporting as needed.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+            What industries do you support?
+          </button>
+        </h2>
+        <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faq">
+          <div class="accordion-body">
+            Industrial supply across energy, construction, mining, heavy equipment, transportation, and fabrication in both OEM and distribution environments.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="container mt-5">
+    <h2 class="section-title">Ready to install your growth system</h2>
+    <p>If you want fewer tools, faster cycles, and clearer KPIs, we should talk.</p>
+    <div class="d-flex gap-2 flex-wrap">
+      <a class="btn btn-dark" href="mailto:hsantiago.ov@gmail.com">Email Vosh</a>
+      <a class="btn btn-outline-dark" href="tel:+19153148807">Call</a>
+      <a class="btn btn-outline-dark" target="_blank" rel="noopener" href="https://www.linkedin.com/in/hector-santiago-ortiz-vivo">LinkedIn</a>
+    </div>
+    <p class="muted mt-3 mb-0">Availability for speaking, advisory, and implementation projects.</p>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Vosh Business Solutions | Powered by Strategy & Simplicity</p>
+    <div class="container text-center">
+      <p class="mb-1">&copy; 2025 Vosh Business Solutions</p>
+      <p class="mb-0">Contact: <a class="text-white" href="tel:+19153148807">+1 915 314 8807</a> · <a class="text-white" href="mailto:hsantiago.ov@gmail.com">hsantiago.ov@gmail.com</a></p>
     </div>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
