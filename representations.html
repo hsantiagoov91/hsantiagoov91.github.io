@@ -38,7 +38,7 @@
 </head>
 <body>
 
-  <!-- NAVBAR (matches services.html style) -->
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container">
       <a class="navbar-brand" href="https://jvosh.com/">
@@ -66,7 +66,7 @@
     <p class="lead">We connect world‑class manufacturers with the most demanding markets. Business development, technical advisory, and a modern support model to grow faster with less friction.</p>
   </header>
 
-  <!-- NOSOTROS / VALUE CARDS -->
+  <!-- VALUE CARDS -->
   <section class="container mt-4">
     <div class="row g-4">
       <div class="col-md-3">
@@ -104,7 +104,7 @@
     </div>
   </section>
 
-  <!-- SOLUCIONES / TABS -->
+  <!-- SOLUTIONS BY BRAND -->
   <section class="container mt-5">
     <h2 class="section-title">Solutions by Brand</h2>
 
@@ -127,11 +127,12 @@
           <div class="col-lg-6">
             <h3 class="h4 fw-bold">JM Tor Par — Hot Forged Bolts & Cap Screws</h3>
             <p>Hot‑forged fasteners for critical applications (Grade 5, Grade 8, ASTM A325, A490).</p>
-            <ul class="mb-0">
+            <ul class="mb-2">
               <li>Standards and compliance guidance.</li>
               <li>Reliable supply and JIT logistics.</li>
               <li>Custom products and sourcing.</li>
-             </ul>
+            </ul>
+            <a class="btn btn-outline-primary btn-sm" href="https://www.jmtorpar.com/" target="_blank" rel="noopener">Visit JM Tor Par</a>
           </div>
           <div class="col-lg-6">
             <div class="card card-shadow">
@@ -152,11 +153,12 @@
           <div class="col-lg-6">
             <h3 class="h4 fw-bold">CMP Pratsa — Heavy Vehicle Suspension</h3>
             <p>Reinforced clamps, threaded bars, and studs with OEM quality.</p>
-            <ul class="mb-0">
+            <ul class="mb-2">
               <li>Penetration in OEM programs.</li>
               <li>Application support and training.</li>
               <li>Direct factory link for faster iteration.</li>
             </ul>
+            <a class="btn btn-outline-primary btn-sm" href="https://www.pratsa.com.mx/" target="_blank" rel="noopener">Visit Pratsa</a>
           </div>
           <div class="col-lg-6">
             <div class="card card-shadow">
@@ -177,11 +179,12 @@
           <div class="col-lg-6">
             <h3 class="h4 fw-bold">Parbo — Suspension & Pump Components</h3>
             <p>High‑durability components for harsh duty in transport, agriculture, and mining.</p>
-            <ul class="mb-0">
+            <ul class="mb-2">
               <li>Expanded distributor network in MX & LATAM.</li>
               <li>Field‑proven performance.</li>
               <li>Portfolio optimization from field feedback.</li>
             </ul>
+            <a class="btn btn-outline-primary btn-sm" href="https://www.parbo.com.mx/" target="_blank" rel="noopener">Visit Parbo</a>
           </div>
           <div class="col-lg-6">
             <div class="card card-shadow">
@@ -198,7 +201,7 @@
     </div>
   </section>
 
-  <!-- SECTORES -->
+  <!-- INDUSTRIES -->
   <section class="container mt-5">
     <h2 class="section-title">Industries Served</h2>
     <div class="card card-shadow mt-3">
@@ -210,7 +213,7 @@
     </div>
   </section>
 
-  <!-- TECNOLOGÍA -->
+  <!-- PLATFORM -->
   <section class="container mt-5">
     <h2 class="section-title">Platform</h2>
     <div class="row g-4 mt-2">
@@ -260,7 +263,6 @@
 
   <!-- Charts init -->
   <script>
-    // Horizontal bar chart factory
     function renderHBar(canvasId, labels, values) {
       const ctx = document.getElementById(canvasId).getContext('2d');
       return new Chart(ctx, {
@@ -270,7 +272,7 @@
           datasets: [{
             label: 'Specialization',
             data: values,
-            backgroundColor: '#dc3545',  // Bootstrap danger tone
+            backgroundColor: '#dc3545',
             borderColor: '#AD1403',
             borderWidth: 1
           }]
@@ -285,7 +287,6 @@
       });
     }
 
-    // Prepare charts when tab is shown (so canvas sizes are correct)
     const charts = {};
     const configs = {
       'chart-jm': { labels: ['Heavy Machinery & Suspension Parts', 'Construction', 'Energy'], values: [90,85,70] },
@@ -300,20 +301,16 @@
       }
     }
 
-    // Init first tab chart immediately
     ensureChart('chart-jm');
 
-    // Hook tab events for the others
-    const tabElList = document.querySelectorAll('button[data-bs-toggle="tab"]');
-    tabElList.forEach(tabEl => {
+    document.querySelectorAll('button[data-bs-toggle="tab"]').forEach(tabEl => {
       tabEl.addEventListener('shown.bs.tab', event => {
-        const target = event.target.getAttribute('data-bs-target'); // e.g. "#cmp"
+        const target = event.target.getAttribute('data-bs-target');
         if (target === '#cmp') ensureChart('chart-cmp');
         if (target === '#parbo') ensureChart('chart-parbo');
       });
     });
 
-    // Polar area chart (Industries)
     new Chart(document.getElementById('sectoresChart').getContext('2d'), {
       type: 'polarArea',
       data: {
@@ -321,24 +318,17 @@
         datasets: [{
           data: [10,10,10,10,10],
           backgroundColor: [
-            'rgba(220,53,69,0.7)',   // danger
-            'rgba(13,110,253,0.7)',  // primary
-            'rgba(25,135,84,0.7)',   // success
-            'rgba(255,193,7,0.7)',   // warning
-            'rgba(13,202,240,0.7)'   // info
+            'rgba(220,53,69,0.7)',
+            'rgba(13,110,253,0.7)',
+            'rgba(25,135,84,0.7)',
+            'rgba(255,193,7,0.7)',
+            'rgba(13,202,240,0.7)'
           ]
         }]
       },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { position: 'bottom' } }
-      }
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } }
     });
   </script>
-</body>
-</html>
-
 </body>
 </html>
 
