@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Vosh | Representaciones Industriales</title>
+  <meta name="description" content="Representaciones industriales estratégicas. Desarrollo de negocio, asesoría técnica y soporte para OEMs y distribuidores en México y LATAM." />
+  <link rel="canonical" href="https://jvosh.com/representations/" />
+  <meta name="theme-color" content="#0d6efd" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vosh | Representaciones Industriales" />
+  <meta property="og:description" content="Conectamos fabricantes de clase mundial con mercados exigentes. Desarrollo de negocio, soporte técnico y automatización." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jvosh.com/representations/" />
+  <meta property="og:image" content="https://jvosh.com/logo.png" />
+
+  <!-- Assets -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Chart.js pinned version -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4"></script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+    .chart-container { position: relative; width: 100%; max-width: 500px; margin: 0 auto; height: 350px; max-height: 400px; }
+    .horizontal-chart-container { position: relative; width: 100%; max-width: 600px; margin: 0 auto; height: 250px; max-height: 300px; }
+    .tab-button.active { border-color: #0d6efd; background-color: #0d6efd; color: #fff; }
+    /* focus styles for accessibility */
+    a:focus, button:focus { outline: 2px solid #0d6efd; outline-offset: 2px; }
+  </style>
+</head>
+
+<body class="text-gray-700">
+  <!-- NAV -->
+  <header class="sticky top-0 bg-white shadow-md z-50">
+    <nav class="container mx-auto px-6 py-3 flex justify-between items-center" aria-label="Principal">
+      <div class="text-2xl font-bold text-gray-800">VOSH</div>
+
+      <div class="hidden md:flex space-x-6">
+        <a href="#nosotros" class="text-gray-600 hover:text-blue-600">Nosotros</a>
+        <a href="#soluciones" class="text-gray-600 hover:text-blue-600">Soluciones</a>
+        <a href="#sectores" class="text-gray-600 hover:text-blue-600">Sectores</a>
+        <a href="#tecnologia" class="text-gray-600 hover:text-blue-600">Tecnología</a>
+        <a href="#contacto" class="text-gray-600 hover:text-blue-600">Contacto</a>
+      </div>
+
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-gray-800 focus:outline-none"
+                aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white py-2">
+      <a href="#nosotros" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Nosotros</a>
+      <a href="#soluciones" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Soluciones</a>
+      <a href="#sectores" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Sectores</a>
+      <a href="#tecnologia" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Tecnología</a>
+      <a href="#contacto" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Contacto</a>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6 py-8">
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="pt-16 -mt-16 mb-16">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Socio en Representaciones Industriales Estratégicas</h1>
+        <p class="text-lg max-w-3xl mx-auto">
+          Vosh conecta fabricantes de clase mundial con mercados exigentes. Desarrollo de negocios, asesoría técnica
+          y soporte integral para impulsar crecimiento y eficiencia.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <h3 class="text-xl font-bold text-blue-600 mb-3">Experiencia</h3>
+          <p>Más de 40 años combinados y dominio del mercado regional respaldan nuestras estrategias.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <h3 class="text-xl font-bold text-blue-600 mb-3">Marcas Líderes</h3>
+          <p>Portafolio exclusivo con acceso a calidad superior y tecnología de vanguardia.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <h3 class="text-xl font-bold text-blue-600 mb-3">Soporte Técnico</h3>
+          <p>Asesoría experta para selección y aplicación óptima de componentes.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <h3 class="text-xl font-bold text-blue-600 mb-3">Cobertura</h3>
+          <p>Base en el norte de México con alcance nacional y LATAM.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUCIONES -->
+    <section id="soluciones" class="pt-16 -mt-16 mb-16">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Soluciones por Marca</h2>
+        <p class="text-lg max-w-3xl mx-auto">
+          Explore las marcas representadas. Compare enfoques y mercados de especialización.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="mb-6 flex flex-wrap justify-center border-b border-gray-200" role="tablist" aria-label="Marcas">
+          <button class="tab-button text-lg font-semibold py-2 px-6 border-b-2 transition-colors active"
+                  data-tab="jm-torpar" role="tab" aria-selected="true">JM Torpar</button>
+          <button class="tab-button text-lg font-semibold py-2 px-6 border-b-2 transition-colors"
+                  data-tab="cmp-pratsa" role="tab" aria-selected="false">CMP Pratsa</button>
+          <button class="tab-button text-lg font-semibold py-2 px-6 border-b-2 transition-colors"
+                  data-tab="parbo" role="tab" aria-selected="false">Parbo</button>
+        </div>
+        <div id="tab-content"></div>
+      </div>
+    </section>
+
+    <!-- SECTORES -->
+    <section id="sectores" class="pt-16 -mt-16 mb-16">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Sectores Atendidos</h2>
+        <p class="text-lg max-w-3xl mx-auto">
+          Entendemos las demandas de cada sector y habilitamos continuidad operativa con máxima eficiencia.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="chart-container">
+          <canvas id="sectoresChart" aria-label="Sectores atendidos" role="img"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECNOLOGÍA -->
+    <section id="tecnologia" class="pt-16 -mt-16 mb-16">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Plataforma Humana y Tecnológica</h2>
+        <p class="text-lg max-w-3xl mx-auto">
+          Ecosistema que combina cercanía humana con automatización para experiencias fluidas de alto valor.
+        </p>
+      </div>
+
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <div class="flex flex-col md:flex-row items-center justify-around gap-8 text-center">
+          <div class="flex flex-col items-center">
+            <h3 class="text-xl font-bold mb-1">Clientes</h3>
+            <p class="max-w-xs">Respuestas ágiles y acceso 24/7 a información precisa.</p>
+          </div>
+
+          <div class="flex flex-col items-center text-blue-600 font-semibold">
+            <div class="w-full text-center text-sm md:text-base">Vosh BRM &amp; AIAO</div>
+            <div class="w-px md:w-48 h-16 md:h-px bg-blue-300 my-2"></div>
+            <div class="w-full text-center text-sm md:text-base">Gestión y Automatización Inteligente</div>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <h3 class="text-xl font-bold mb-1">Fabricantes</h3>
+            <p class="max-w-xs">Visibilidad en tiempo real del mercado y la demanda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER / CONTACTO -->
+  <footer id="contacto" class="bg-gray-800 text-white pt-16 -mt-16">
+    <div class="container mx-auto px-6 py-12 text-center">
+      <h2 class="text-3xl font-bold mb-4">Inicie la conversación</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto">
+        Si busca impulsar su negocio con productos industriales de primera categoría y soporte local, estamos listos para ayudar.
+      </p>
+      <a href="mailto:contacto@jvosh.com"
+         class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors inline-block">
+        Agendar una reunión
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile menu a11y toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenuButton.addEventListener('click', () => {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        mobileMenuButton.setAttribute('aria-expanded', String(!expanded));
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Tab data
+      const tabData = {
+        'jm-torpar': {
+          title: 'JM Torpar — Tornillería Industrial de Alta Resistencia',
+          description: 'Fabricante de tornillería forjada en caliente para aplicaciones críticas (Grado 5, Grado 8, ASTM A325, A490).',
+          strengths: [
+            'Acompañamiento técnico en normativas.',
+            'Suministro confiable y logística justo a tiempo.',
+            'Desarrollo de soluciones y productos a medida.'
+          ],
+          chartData: {
+            labels: ['Maquinaria Pesada', 'Construcción', 'Energía'],
+            values: [90, 85, 70]
+          }
+        },
+        'cmp-pratsa': {
+          title: 'CMP Pratsa — Suspensión Automotriz Pesada',
+          description: 'Portafolio de abrazaderas reforzadas, barras roscadas y birlos con calidad OEM.',
+          strengths: [
+            'Penetración en OEMs.',
+            'Soporte técnico para aplicación correcta.',
+            'Conexión directa con fábrica para acelerar innovación.'
+          ],
+          chartData: {
+            labels: ['OEMs Automotriz', 'Flotas y Refacciones', 'Talleres Especializados'],
+            values: [80, 95, 75]
+          }
+        },
+        'parbo': {
+          title: 'Parbo — Suspensión y Partes para Bombas',
+          description: 'Componentes de alta durabilidad para trabajo rudo en transporte, agrícola y minería.',
+          strengths: [
+            'Red de distribuidores en México y LATAM.',
+            'Desempeño probado en condiciones extremas.',
+            'Optimización de portafolio con feedback de campo.'
+          ],
+          chartData: {
+            labels: ['Transporte Pesado', 'Maquinaria Agrícola', 'Minería'],
+            values: [90, 85, 70]
+          }
+        }
+      };
+
+      const tabButtons = document.querySelectorAll('.tab-button');
+      const tabContentContainer = document.getElementById('tab-content');
+      let currentChart = null;
+
+      function renderTabContent(tabId) {
+        const data = tabData[tabId];
+        const strengthsHtml = data.strengths
+          .map(s => `<li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">✓</span>${s}</li>`)
+          .join('');
+
+        tabContentContainer.innerHTML = `
+          <div id="${tabId}" class="tab-pane">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">${data.title}</h3>
+                <p class="mb-4">${data.description}</p>
+                <h4 class="font-bold text-gray-800">Fortalezas Integradas por Vosh</h4>
+                <ul class="mt-2 space-y-2">${strengthsHtml}</ul>
+              </div>
+              <div>
+                <h4 class="font-bold text-center text-gray-800 mb-2">Foco Principal de Mercado</h4>
+                <div class="horizontal-chart-container">
+                  <canvas id="brandChart" aria-label="Foco de mercado por marca" role="img"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+
+        // Reset chart instance
+        if (currentChart) currentChart.destroy();
+
+        const brandCtx = document.getElementById('brandChart').getContext('2d');
+        currentChart = new Chart(brandCtx, {
+          type: 'bar',
+          data: {
+            labels: data.chartData.labels,
+            datasets: [{
+              label: 'Nivel de especialización',
+              data: data.chartData.values,
+              backgroundColor: '#3b82f6',
+              borderColor: '#1d4ed8',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: { intersect: false }
+            },
+            scales: {
+              x: { beginAtZero: true, max: 100, grid: { drawBorder: false } }
+            }
+          }
+        });
+      }
+
+      // Tabs interaction
+      tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          tabButtons.forEach(btn => {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+          });
+          button.classList.add('active');
+          button.setAttribute('aria-selected', 'true');
+          renderTabContent(button.dataset.tab);
+        });
+      });
+
+      // Initial tab
+      renderTabContent('jm-torpar');
+
+      // Sectors chart
+      const sectoresCtx = document.getElementById('sectoresChart').getContext('2d');
+      new Chart(sectoresCtx, {
+        type: 'polarArea',
+        data: {
+          labels: ['Minería', 'Automotriz', 'Energético', 'Construcción', 'Agrícola'],
+          datasets: [{
+            label: 'Sectores atendidos',
+            data: [10, 10, 10, 10, 10],
+            backgroundColor: [
+              'rgba(59, 130, 246, 0.7)',
+              'rgba(37, 99, 235, 0.7)',
+              'rgba(29, 78, 216, 0.7)',
+              'rgba(30, 64, 175, 0.7)',
+              'rgba(30, 58, 138, 0.7)'
+            ]
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            r: {
+              pointLabels: { display: true, centerPointLabels: true, font: { size: 14 } }
+            }
+          },
+          plugins: { legend: { position: 'bottom' } }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
