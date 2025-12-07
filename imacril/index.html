@@ -1,597 +1,1037 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imacril Collection | jvosh.com</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imacril Collection · Intro US</title>
 
-    <meta name="description" content="Colección Imacril: espejos iluminados, organizadores y kits de belleza con precios especiales de introducción.">
-    <link rel="canonical" href="https://jvosh.com/imacril/">
+  <!-- Tipografías similares a Imacril -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #ffeef8 0%, #fff5f7 100%);
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
-            color: white;
-            padding: 60px 40px;
-            text-align: center;
-        }
-        
-        .header h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-        
-        .header p {
-            font-size: 20px;
-            font-style: italic;
-            opacity: 0.95;
-        }
-        
-        .intro {
-            padding: 40px;
-            text-align: center;
-            background: #fff9fc;
-            border-bottom: 3px solid #ff6b9d;
-        }
-        
-        .intro h2 {
-            color: #c44569;
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-        
-        .intro p {
-            color: #555;
-            font-size: 16px;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .products-grid {
-            padding: 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .product-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 2px solid #ffe0ee;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(255,107,157,0.2);
-        }
-        
-        .product-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            background: #fafafa;
-            display: block;
-        }
+  <style>
+    :root {
+      --imacril-pink: #ff9dbd;
+      --imacril-pink-dark: #c2416b;
+      --imacril-cream: #fff7fb;
+      --imacril-brown: #3b272f;
+      --imacril-soft-gray: #f5f5f7;
+    }
 
-        .product-link {
-            display: block;
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        .product-info {
-            padding: 20px;
-        }
-        
-        .product-name {
-            font-size: 22px;
-            color: #c44569;
-            margin-bottom: 12px;
-            font-weight: bold;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .product-name a {
-            color: inherit;
-            text-decoration: none;
-        }
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #ffffff;
+      color: var(--imacril-brown);
+      line-height: 1.6;
+    }
 
-        .product-name a:hover {
-            text-decoration: underline;
-        }
-        
-        .product-price {
-            font-size: 28px;
-            color: #ff6b9d;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        .stock-info {
-            display: inline-block;
-            background: #e8f5e9;
-            color: #2e7d32;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            margin-bottom: 10px;
-        }
-        
-        .stock-limited {
-            background: #fff3e0;
-            color: #e65100;
-        }
-        
-        .cta-section {
-            background: linear-gradient(135deg, #c44569 0%, #ff6b9d 100%);
-            color: white;
-            padding: 60px 40px;
-            text-align: center;
-        }
-        
-        .cta-section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        
-        .cta-section p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-        
-        .whatsapp-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 15px;
-            background: #25D366;
-            color: white;
-            padding: 20px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 22px;
-            font-weight: bold;
-            box-shadow: 0 5px 20px rgba(37,211,102,0.3);
-            transition: all 0.3s ease;
-        }
-        
-        .whatsapp-btn:hover {
-            background: #128C7E;
-            transform: scale(1.05);
-            box-shadow: 0 8px 30px rgba(37,211,102,0.4);
-        }
-        
-        .whatsapp-icon {
-            width: 30px;
-            height: 30px;
-        }
-        
-        .footer {
-            background: #2c2c2c;
-            color: white;
-            padding: 30px 40px;
-            text-align: center;
-        }
-        
-        .footer p {
-            opacity: 0.8;
-            line-height: 1.6;
-        }
-        
-        .footer a {
-            color: #ff6b9d;
-            text-decoration: none;
-        }
-        
-        .footer a:hover {
-            text-decoration: underline;
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        .highlight-banner {
-            background: #fff9e6;
-            border-left: 5px solid #ffc107;
-            padding: 20px 40px;
-            margin: 20px 40px;
-            border-radius: 5px;
-        }
-        
-        .highlight-banner h3 {
-            color: #f57c00;
-            margin-bottom: 10px;
-        }
+    .page-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 16px 80px;
+    }
 
-        @media print {
-            body {
-                padding: 0;
-                background: white;
-            }
-            .product-card:hover {
-                transform: none;
-                box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 32px;
-            }
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-            .highlight-banner {
-                margin: 20px;
-                padding: 20px;
-            }
-        }
-    </style>
+    /* Hero / estilo tipo imacril home */
+    .hero {
+      background: radial-gradient(circle at top left, #ffe3f1 0, #fff7fb 35%, #ffffff 100%);
+      border-radius: 24px;
+      padding: 28px 20px 32px;
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 16px;
+      align-items: center;
+      border: 1px solid #ffe0f0;
+    }
+
+    .hero-left {
+      padding-inline: 12px;
+    }
+
+    .hero-top-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 14px;
+      border-radius: 999px;
+      background: #ffffff90;
+      border: 1px solid #ffd7ea;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--imacril-pink-dark);
+      margin-bottom: 10px;
+    }
+
+    .hero-top-badge span.icon {
+      font-size: 14px;
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", "Times New Roman", serif;
+      font-size: clamp(1.9rem, 3vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      margin-bottom: 4px;
+      color: var(--imacril-brown);
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #6c4b59;
+      margin-bottom: 14px;
+    }
+
+    .hero-bullets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+      font-size: 0.82rem;
+      color: #6c4b59;
+    }
+
+    .hero-badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #ffffffc4;
+      border: 1px solid #f0d0e0;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .hero-text {
+      font-size: 0.92rem;
+      max-width: 360px;
+      color: #5b3b47;
+      margin-bottom: 18px;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .hero-button-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, var(--imacril-pink) 0%, var(--imacril-pink-dark) 100%);
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      box-shadow: 0 12px 26px rgba(255, 157, 189, 0.45);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.16s ease;
+    }
+
+    .hero-button-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.02);
+      box-shadow: 0 16px 32px rgba(194, 65, 107, 0.45);
+    }
+
+    .hero-button-secondary {
+      font-size: 0.85rem;
+      color: #7b5262;
+    }
+
+    .hero-right {
+      padding: 0 10px;
+    }
+
+    .hero-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      border: 1px solid #ffe1f1;
+    }
+
+    .hero-card-header {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #b35a7b;
+      margin-bottom: 6px;
+    }
+
+    .hero-card-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #4c313c;
+    }
+
+    .hero-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .hero-mini-tag {
+      font-size: 0.8rem;
+      padding: 6px 8px;
+      border-radius: 12px;
+      background: #fff5f9;
+      border: 1px solid #ffd3e8;
+      color: #a34c71;
+    }
+
+    /* Intro section */
+    .intro-section {
+      padding: 18px 8px 8px;
+      text-align: center;
+    }
+
+    .intro-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      margin-bottom: 4px;
+      color: #442933;
+    }
+
+    .intro-subtitle {
+      font-size: 0.95rem;
+      color: #6b4a58;
+      max-width: 520px;
+      margin: 0 auto 4px;
+    }
+
+    .intro-note {
+      font-size: 0.78rem;
+      color: #a07186;
+    }
+
+    /* Banner destacado */
+    .highlight-banner {
+      margin: 20px 0 12px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: linear-gradient(90deg, #fff5f9 0%, #fffef7 100%);
+      border: 1px solid #ffe1f1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .highlight-left {
+      min-width: 0;
+    }
+
+    .highlight-title {
+      font-size: 0.93rem;
+      font-weight: 600;
+      color: #b35375;
+      margin-bottom: 2px;
+    }
+
+    .highlight-text {
+      font-size: 0.85rem;
+      color: #6a4a59;
+    }
+
+    .highlight-tag {
+      font-size: 0.78rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px dashed #ffcddf;
+      color: #a34c71;
+      white-space: nowrap;
+    }
+
+    /* Grid productos */
+    .products-section {
+      margin-top: 16px;
+    }
+
+    .products-heading-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 8px;
+      padding-inline: 2px;
+    }
+
+    .products-heading {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #4a2f39;
+    }
+
+    .products-subheading {
+      font-size: 0.8rem;
+      color: #9a7286;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+      border: 1px solid #f5ddea;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(203, 113, 150, 0.22);
+      border-color: #ffc1dd;
+    }
+
+    .product-image-wrapper {
+      background: var(--imacril-soft-gray);
+      height: 230px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-body {
+      padding: 14px 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .product-category-pill {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #b0728a;
+    }
+
+    .product-name {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: #432733;
+    }
+
+    .product-price-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 2px;
+    }
+
+    .product-price {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--imacril-pink-dark);
+    }
+
+    .product-tag-intro {
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #fff5f8;
+      border: 1px solid #ffd4e4;
+      color: #a6476b;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .stock-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 6px;
+      font-size: 0.75rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #edf9f0;
+      color: #2e7d32;
+      border: 1px solid #c9e9cf;
+      width: fit-content;
+    }
+
+    .stock-pill.limited {
+      background: #fff5eb;
+      color: #e65100;
+      border-color: #ffd3aa;
+    }
+
+    .product-description {
+      font-size: 0.8rem;
+      color: #765160;
+      margin-top: 4px;
+    }
+
+    .product-link {
+      font-size: 0.78rem;
+      margin-top: 8px;
+      color: #b35375;
+      font-weight: 500;
+    }
+
+    .product-link span {
+      font-size: 0.9em;
+    }
+
+    /* CTA final */
+    .cta-section {
+      margin-top: 32px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, var(--imacril-pink-dark) 0%, var(--imacril-pink) 100%);
+      padding: 26px 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .cta-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .cta-text {
+      font-size: 0.95rem;
+      opacity: 0.96;
+      max-width: 520px;
+      margin: 0 auto 16px;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 22px;
+      border-radius: 999px;
+      background-color: #25d366;
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.26);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.16s ease;
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.05);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .whatsapp-icon {
+      width: 22px;
+      height: 22px;
+      fill: #ffffff;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 20px;
+      padding-top: 12px;
+      border-top: 1px solid #f0d0e0;
+      text-align: center;
+      font-size: 0.78rem;
+      color: #8a6576;
+    }
+
+    .footer a {
+      color: var(--imacril-pink-dark);
+      font-weight: 500;
+    }
+
+    /* Print button */
+    @media print {
+      body {
+        background: #ffffff;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 20px 16px 22px;
+      }
+
+      .hero-right {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page-wrapper {
+        padding-inline: 12px;
+      }
+
+      .hero {
+        border-radius: 18px;
+      }
+
+      .highlight-banner {
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>✨ Imacril Collection ✨</h1>
-            <p>Espejos y Organizadores de Lujo para tu Belleza</p>
+  <div class="page-wrapper">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-top-badge">
+          <span class="icon">♡</span>
+          <span>Ofertas por lanzamiento</span>
         </div>
-        
-        <!-- Intro -->
-        <div class="intro">
-            <h2>Descubre Nuestra Colección Exclusiva</h2>
-            <p>Transforma tu rutina de belleza con nuestros espejos iluminados profesionales, organizadores elegantes y kits completos. Diseño sofisticado, calidad premium y funcionalidad excepcional.</p>
-        </div>
-        
-        <!-- Highlight Banner -->
-        <div class="highlight-banner">
-            <h3>🎁 Precios Especiales de Introducción</h3>
-            <p>Aprovecha nuestras ofertas exclusivas en productos seleccionados. Stock limitado disponible.</p>
-        </div>
-        
-        <!-- Products Grid -->
-        <div class="products-grid">
-            <!-- Espejo Chloe Full Body -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/espejo-chloe-full-body?_pos=1&_psq=chlo&_ss=e&_v=1.0" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/EspejosNuevosPaginaWeb_Mesadetrabajo1copia.jpg?v=1750274683" alt="Espejo Chloe Full Body Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/espejo-chloe-full-body?_pos=1&_psq=chlo&_ss=e&_v=1.0" target="_blank" rel="noopener">Espejo Chloe Full Body</a>
-                    </div>
-                    <div class="product-price">$475 USD</div>
-                    <span class="stock-info stock-limited">Solo 2 unidades disponibles</span>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Espejo de cuerpo completo con iluminación LED profesional.</p>
-                </div>
-            </div>
+        <h1 class="hero-title">Imacril Collection · USA Intro</h1>
+        <p class="hero-subtitle">Espejos LED, vanitys y organizadores con precios especiales para entrega en The Woodlands, Texas.</p>
 
-            <!-- Espejo Nina Full Body -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/espejo-nina-full-body?_pos=1&_psq=nina&_ss=e&_v=1.0" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/EspejosNuevosPaginaWeb_Mesadetrabajo1copia9.jpg?v=1750274942" alt="Espejo Nina Full Body Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/espejo-nina-full-body?_pos=1&_psq=nina&_ss=e&_v=1.0" target="_blank" rel="noopener">Espejo Nina Full Body</a>
-                    </div>
-                    <div class="product-price">$425 USD</div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Elegancia y funcionalidad en un diseño de cuerpo completo.</p>
-                </div>
-            </div>
-
-            <!-- Espejo Lily Full Body -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/espejo-lily-full-body?_pos=1&_sid=4a91ae924&_ss=r" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://imacril.com/cdn/shop/files/EspejosNuevosPaginaWeb_Mesadetrabajo1copia5_1220x_crop_center.jpg?v=1750275335" alt="Espejo Lily Full Body Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/espejo-lily-full-body?_pos=1&_sid=4a91ae924&_ss=r" target="_blank" rel="noopener">Espejo Lily Full Body</a>
-                    </div>
-                    <div class="product-price">$325 USD</div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Iluminación perfecta para todo tu look.</p>
-                </div>
-            </div>
-            
-            <!-- Vanity Victoria Complete -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/vanity-victoria?_pos=8&_sid=145ec43fd&_ss=r" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/VVFBB.jpg?v=1741359150" alt="Vanity Victoria Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/vanity-victoria?_pos=8&_sid=145ec43fd&_ss=r" target="_blank" rel="noopener">Vanity Victoria Complete</a>
-                    </div>
-                    <div class="product-price">$650 USD</div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Set completo: Tocador + Espejo Olivia + Organizador Alessandra.</p>
-                </div>
-            </div>
-            
-            <!-- Espejo Aurora -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/espejo-aurora?_pos=1&_sid=fa3c899cc&_ss=r" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Aurora_white_light.jpg?v=1730999510" alt="Espejo Aurora Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/espejo-aurora?_pos=1&_sid=fa3c899cc&_ss=r" target="_blank" rel="noopener">Espejo Aurora</a>
-                    </div>
-                    <div class="product-price">$325 USD</div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Tres tonos de luz ajustables para maquillaje perfecto.</p>
-                </div>
-            </div>
-            
-            <!-- Espejo Emily -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/espejo-emily?_pos=1&_psq=em&_ss=e&_v=1.0" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Emily_white_light.jpg?v=1730999662" alt="Espejo Emily Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/espejo-emily?_pos=1&_psq=em&_ss=e&_v=1.0" target="_blank" rel="noopener">Espejo Emily</a>
-                    </div>
-                    <div class="product-price">$325 USD</div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Diseño moderno con control de intensidad lumínica.</p>
-                </div>
-            </div>
-            
-            <!-- Espejo Susi -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/espejo-susi?_pos=1&_sid=d3d9f433e&_ss=r" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://imacril.com/cdn/shop/files/Espejo_Susi_Dorado_Chica_White_Background_1220x_crop_center.jpg?v=1743784164" alt="Espejo Susi Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/espejo-susi?_pos=1&_sid=d3d9f433e&_ss=r" target="_blank" rel="noopener">Espejo Susi</a>
-                    </div>
-                    <div class="product-price">$250 USD</div>
-                    <span class="stock-info stock-limited">Solo 4 unidades</span>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Compacto y elegante, perfecto para cualquier espacio.</p>
-                </div>
-            </div>
-            
-            <!-- Espejo Amelie -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/espejo-amelie?_pos=3&_psq=amel&_ss=e&_v=1.0" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Amelie_Dorado_white_light.jpg?v=1730999749" alt="Espejo Amelie Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/espejo-amelie?_pos=3&_psq=amel&_ss=e&_v=1.0" target="_blank" rel="noopener">Espejo Amelie</a>
-                    </div>
-                    <div class="product-price">$225 USD</div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Estilo clásico con tecnología LED moderna.</p>
-                </div>
-            </div>
-            
-            <!-- Espejo Helen -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/espejo-helen?_pos=1&_psq=heleb%5C%5C%5&_ss=e&_v=1.0" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Helen_Dorado_white_light.jpg?v=1730999843" alt="Espejo Helen Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/espejo-helen?_pos=1&_psq=heleb%5C%5C%5&_ss=e&_v=1.0" target="_blank" rel="noopener">Espejo Helen</a>
-                    </div>
-                    <div class="product-price">$225 USD</div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Acabado dorado premium con tres tonos de luz.</p>
-                </div>
-            </div>
-            
-            <!-- Espejo Olivia -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/espejo-olivia?_pos=1&_psq=olivi&_ss=e&_v=1.0" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Olivia_Dorado_frontal.jpg?v=1742928466" alt="Espejo Olivia Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/espejo-olivia?_pos=1&_psq=olivi&_ss=e&_v=1.0" target="_blank" rel="noopener">Espejo Olivia</a>
-                    </div>
-                    <div class="product-price">$150 USD</div>
-                    <span class="stock-info">10 unidades disponibles</span>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Tamaño ideal para uso diario.</p>
-                </div>
-            </div>
-            
-            <!-- Espejo Aitana -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/espejo-aitana?_pos=1&_psq=aitan&_ss=e&_v=1.0" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Espejo_Aitana_con_caja.jpg?v=1733762114" alt="Espejo Aitana Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/espejo-aitana?_pos=1&_psq=aitan&_ss=e&_v=1.0" target="_blank" rel="noopener">Espejo Aitana</a>
-                    </div>
-                    <div class="product-price">$50 USD</div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Espejo portátil con estuche elegante.</p>
-                </div>
-            </div>
-            
-            <!-- Espejo Hanna -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/espejo-hanna?_pos=1&_psq=hanna&_ss=e&_v=1.0" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Espejo_Hanna_Mesa_de_trabajo_1.jpg?v=1733762377" alt="Espejo Hanna Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/espejo-hanna?_pos=1&_psq=hanna&_ss=e&_v=1.0" target="_blank" rel="noopener">Espejo Hanna</a>
-                    </div>
-                    <div class="product-price">$23 USD</div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Perfecto para tu bolso, disponible en varios colores.</p>
-                </div>
-            </div>
-            
-            <!-- Espejo Mía -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/espejo-mia?_pos=1&_psq=mia&_ss=e&_v=1.0" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Espejo_Mia_Mesa_de_trabajo_1.jpg?v=1733762954" alt="Espejo Mía Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/espejo-mia?_pos=1&_psq=mia&_ss=e&_v=1.0" target="_blank" rel="noopener">Espejo Mía</a>
-                    </div>
-                    <div class="product-price">$18 USD</div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Compacto y funcional con acabado dorado.</p>
-                </div>
-            </div>
-            
-            <!-- Kit Amelie -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/kit-amelie?_pos=1&_psq=ameli&_ss=e&_v=1.0" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Amelie_con_caja_Mesa_de_trabajo_1.jpg?v=1733761571" alt="Kit Amelie Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/kit-amelie?_pos=1&_psq=ameli&_ss=e&_v=1.0" target="_blank" rel="noopener">Kit Amelie</a>
-                    </div>
-                    <div class="product-price">$55 USD</div>
-                    <span class="stock-info">12 unidades disponibles</span>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Set completo con accesorios de belleza.</p>
-                </div>
-            </div>
-            
-            <!-- Kit Madison -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/kit-madison?_pos=1&_psq=madi&_ss=e&_v=1.0" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Madison_con_caja_Mesa_de_trabajo_1.jpg?v=1733760289" alt="Kit Madison Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/kit-madison?_pos=1&_psq=madi&_ss=e&_v=1.0" target="_blank" rel="noopener">Kit Madison</a>
-                    </div>
-                    <div class="product-price">$50 USD</div>
-                    <span class="stock-info">41 unidades disponibles</span>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Organizador multifuncional con espejo.</p>
-                </div>
-            </div>
-            
-            <!-- Organizador Alessandra -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/organizador-alessandra?_pos=1&_sid=d10d21602&_ss=r" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Alessandra_con_caja_Mesa_de_trabajo_1.jpg?v=1733759254" alt="Organizador Alessandra Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/organizador-alessandra?_pos=1&_sid=d10d21602&_ss=r" target="_blank" rel="noopener">Organizador Alessandra</a>
-                    </div>
-                    <div class="product-price">$50 USD</div>
-                    <span class="stock-info">36 unidades disponibles</span>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Organización premium para tu tocador.</p>
-                </div>
-            </div>
-            
-            <!-- Organizador Alaina -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/organizador-alaina?_pos=1&_psq=alai&_ss=e&_v=1.0" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Alaina.jpg?v=1731449414" alt="Organizador Alaina Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/organizador-alaina?_pos=1&_psq=alai&_ss=e&_v=1.0" target="_blank" rel="noopener">Organizador Alaina</a>
-                    </div>
-                    <div class="product-price">$50 USD</div>
-                    <span class="stock-info">12 unidades disponibles</span>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Ideal para skincare y cosméticos.</p>
-                </div>
-            </div>
-            
-            <!-- Kit Antonella -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/kit-antonella?_pos=1&_psq=anto&_ss=e&_v=1.0" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Antonella_con_caja.jpg?v=1733759822" alt="Kit Antonella Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/kit-antonella?_pos=1&_psq=anto&_ss=e&_v=1.0" target="_blank" rel="noopener">Kit Antonella</a>
-                    </div>
-                    <div class="product-price">$38 USD</div>
-                    <span class="stock-info">35 unidades disponibles</span>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Set de inicio perfecto para tu colección.</p>
-                </div>
-            </div>
-            
-            <!-- Estuche Charlotte -->
-            <div class="product-card">
-                <a href="https://imacril.com/products/estuche-charlotte?_pos=1&_psq=charlo&_ss=e&_v=1.0" target="_blank" rel="noopener" class="product-link">
-                    <img src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Estuche_Charlotte_con_caja_Mesa_de_trabajo_1.jpg?v=1733761231" alt="Estuche Charlotte Imacril" class="product-image">
-                </a>
-                <div class="product-info">
-                    <div class="product-name">
-                        <a href="https://imacril.com/products/estuche-charlotte?_pos=1&_psq=charlo&_ss=e&_v=1.0" target="_blank" rel="noopener">Estuche Charlotte</a>
-                    </div>
-                    <div class="product-price">$35 USD</div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">Estuche versátil para viajes y almacenamiento.</p>
-                </div>
-            </div>
+        <div class="hero-bullets">
+          <div class="hero-badge">⋆ Precios de introducción en USD</div>
+          <div class="hero-badge">⋆ Stock limitado por modelo</div>
+          <div class="hero-badge">⋆ Entrega incluida en The Woodlands</div>
         </div>
-        
-        <!-- CTA Section -->
-        <div class="cta-section">
-            <h2>¿Lista para Transformar tu Espacio de Belleza?</h2>
-            <p>Contáctanos ahora por WhatsApp y obtén asesoría personalizada.</p>
-            <a href="https://wa.me/19153148638" class="whatsapp-btn" target="_blank" rel="noopener">
-                <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="white" aria-hidden="true">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                </svg>
-                WhatsApp: +1 915 314 8638
+
+        <p class="hero-text">
+          Elige tus piezas favoritas de la nueva colección Imacril y mándame un mensaje por WhatsApp para revisar disponibilidad y coordinar entrega.
+        </p>
+
+        <div class="hero-cta-row">
+          <a href="https://wa.me/19153148638" target="_blank" class="hero-button-primary">
+            <span>Quiero esta colección</span>
+          </a>
+          <span class="hero-button-secondary">Te ayudo a armar el combo ideal para tu espacio.</span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-card-header">Nuevo en The Woodlands</div>
+          <div class="hero-card-title">Espejos, vanitys y organizadores listos para entregar</div>
+          <div class="hero-card-grid">
+            <div class="hero-mini-tag">• Full body mirrors</div>
+            <div class="hero-mini-tag">• Espejos Hollywood LED</div>
+            <div class="hero-mini-tag">• Organizadores de acrílico</div>
+            <div class="hero-mini-tag">• Kits de maquillaje</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro-section">
+      <h2 class="intro-title">Colección Imacril · Introducción USA</h2>
+      <p class="intro-subtitle">
+        Selección especial de espejos y organizadores Imacril con precios de lanzamiento en dólares, ideal para habitaciones, estudios de maquillaje y espacios de trabajo.
+      </p>
+      <p class="intro-note">
+        Los precios listados ya consideran entrega en The Woodlands, TX. Para otras zonas del área de Houston, revisamos costo de envío por separado.
+      </p>
+    </section>
+
+    <!-- HIGHLIGHT -->
+    <section class="highlight-banner">
+      <div class="highlight-left">
+        <div class="highlight-title">Precios especiales de introducción</div>
+        <div class="highlight-text">
+          Cantidades muy limitadas. Una vez agotado el stock, los precios pueden ajustarse a la lista oficial de Imacril.
+        </div>
+      </div>
+      <div class="highlight-tag">Stock sujeto a confirmación al momento de tu mensaje ✨</div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products-section">
+      <div class="products-heading-row">
+        <h3 class="products-heading">Espejos de cuerpo completo</h3>
+        <p class="products-subheading">Perfectos para recámaras, estudios y closets.</p>
+      </div>
+      <div class="products-grid">
+        <!-- Chloe full body -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/EspejosNuevosPaginaWeb_Mesadetrabajo1copia.jpg?v=1750274683" alt="Espejo Chloe Full Body">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Full body mirror</div>
+            <h4 class="product-name">Espejo Chloe · full body</h4>
+            <div class="product-price-row">
+              <span class="product-price">$475 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <div class="stock-pill limited">Solo 2 piezas disponibles</div>
+            <p class="product-description">Espejo de cuerpo completo con luz LED, ideal para crear el rincón protagonista de tu habitación.</p>
+            <a href="https://imacril.com/products/espejo-chloe-full-body?_pos=1&_psq=chlo&_ss=e&_v=1.0" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
             </a>
-        </div>
-        
-        <!-- Footer -->
-        <div class="footer">
-            <p><strong>Imacril - Belleza y Elegancia</strong></p>
-            <p>Visita nuestro sitio web: <a href="https://imacril.com" target="_blank" rel="noopener">imacril.com</a></p>
-            <p style="margin-top: 15px; font-size: 13px;">Todos los precios están en USD. Stock sujeto a disponibilidad. Precios especiales de introducción por tiempo limitado.</p>
-        </div>
-    </div>
-    
-    <script>
-        // Botón para imprimir o guardar como PDF
-        window.onload = function() {
-            const printBtn = document.createElement('button');
-            printBtn.innerHTML = '📄 Descargar como PDF';
-            printBtn.style.cssText = `
-                position: fixed;
-                bottom: 30px;
-                right: 30px;
-                background: #c44569;
-                color: white;
-                padding: 15px 30px;
-                border: none;
-                border-radius: 50px;
-                font-size: 16px;
-                font-weight: bold;
-                cursor: pointer;
-                box-shadow: 0 5px 20px rgba(196,69,105,0.3);
-                z-index: 1000;
-                transition: all 0.3s ease;
-            `;
-            printBtn.onmouseover = () => printBtn.style.transform = 'scale(1.05)';
-            printBtn.onmouseout = () => printBtn.style.transform = 'scale(1)';
-            printBtn.onclick = () => window.print();
-            document.body.appendChild(printBtn);
-        };
-    </script>
+          </div>
+        </article>
+
+        <!-- Nina full body -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/EspejosNuevosPaginaWeb_Mesadetrabajo1copia9.jpg?v=1750274942" alt="Espejo Nina Full Body">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Full body mirror</div>
+            <h4 class="product-name">Espejo Nina · full body</h4>
+            <div class="product-price-row">
+              <span class="product-price">$425 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <p class="product-description">Diseño elegante con luz LED para ver tu outfit completo con iluminación uniforme.</p>
+            <a href="https://imacril.com/products/espejo-nina-full-body?_pos=1&_psq=nina&_ss=e&_v=1.0" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Lily full body -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://imacril.com/cdn/shop/files/EspejosNuevosPaginaWeb_Mesadetrabajo1copia5_1220x_crop_center.jpg?v=1750275335" alt="Espejo Lily Full Body">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Full body mirror</div>
+            <h4 class="product-name">Espejo Lily · full body</h4>
+            <div class="product-price-row">
+              <span class="product-price">$325 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <p class="product-description">Espejo de cuerpo completo con diseño moderno, ideal para espacios jóvenes y luminosos.</p>
+            <a href="https://imacril.com/products/espejo-lily-full-body?_pos=1&_sid=4a91ae924&_ss=r" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Espejos Hollywood / LED -->
+    <section class="products-section">
+      <div class="products-heading-row">
+        <h3 class="products-heading">Espejos Hollywood LED</h3>
+        <p class="products-subheading">Para maquillaje, contenido y rutina de skincare.</p>
+      </div>
+      <div class="products-grid">
+        <!-- Aurora -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Aurora_white_light.jpg?v=1730999510" alt="Espejo Aurora">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Espejo LED</div>
+            <h4 class="product-name">Espejo Aurora</h4>
+            <div class="product-price-row">
+              <span class="product-price">$325 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <p class="product-description">Tres tonos de luz ajustables para maquillaje perfecto en cualquier momento del día.</p>
+            <a href="https://imacril.com/products/espejo-aurora?_pos=1&_sid=fa3c899cc&_ss=r" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Emily -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Emily_white_light.jpg?v=1730999662" alt="Espejo Emily">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Espejo LED</div>
+            <h4 class="product-name">Espejo Emily</h4>
+            <div class="product-price-row">
+              <span class="product-price">$325 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <p class="product-description">Espejo con marco delicado y luz regulable, perfecto para tocador o escritorio.</p>
+            <a href="https://imacril.com/products/espejo-emily?_pos=1&_psq=em&_ss=e&_v=1.0" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Helen -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Helen_Dorado_white_light.jpg?v=1730999843" alt="Espejo Helen">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Espejo LED</div>
+            <h4 class="product-name">Espejo Helen</h4>
+            <div class="product-price-row">
+              <span class="product-price">$225 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <p class="product-description">Acabado dorado premium y tres tonos de luz para un look impecable todos los días.</p>
+            <a href="https://imacril.com/products/espejo-helen?_pos=1&_psq=heleb%5C%5C%5&_ss=e&_v=1.0" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Amelie -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Amelie_Dorado_white_light.jpg?v=1730999749" alt="Espejo Amelie">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Espejo LED</div>
+            <h4 class="product-name">Espejo Amelie</h4>
+            <div class="product-price-row">
+              <span class="product-price">$225 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <p class="product-description">Estilo clásico con tecnología LED moderna, ideal para un tocador elegante.</p>
+            <a href="https://imacril.com/products/espejo-amelie?_pos=3&_psq=amel&_ss=e&_v=1.0" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Olivia -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Olivia_Dorado_frontal.jpg?v=1742928466" alt="Espejo Olivia">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Espejo LED</div>
+            <h4 class="product-name">Espejo Olivia</h4>
+            <div class="product-price-row">
+              <span class="product-price">$150 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <div class="stock-pill">10 unidades disponibles</div>
+            <p class="product-description">Tamaño perfecto para uso diario, combina con cualquier vanity o escritorio.</p>
+            <a href="https://imacril.com/products/espejo-olivia?_pos=1&_psq=olivi&_ss=e&_v=1.0" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Susi -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://imacril.com/cdn/shop/files/Espejo_Susi_Dorado_Chica_White_Background_1220x_crop_center.jpg?v=1743784164" alt="Espejo Susi">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Espejo LED</div>
+            <h4 class="product-name">Espejo Susi</h4>
+            <div class="product-price-row">
+              <span class="product-price">$250 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <div class="stock-pill limited">Solo 4 unidades</div>
+            <p class="product-description">Espejo compacto y elegante, ideal para espacios pequeños con mucho estilo.</p>
+            <a href="https://imacril.com/products/espejo-susi?_pos=1&_sid=d3d9f433e&_ss=r" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Compactos y de mano -->
+    <section class="products-section">
+      <div class="products-heading-row">
+        <h3 class="products-heading">Espejos compactos y de mano</h3>
+        <p class="products-subheading">Para bolsa, viaje y retoques rápidos.</p>
+      </div>
+      <div class="products-grid">
+        <!-- Aitana -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Espejo_Aitana_con_caja.jpg?v=1733762114" alt="Espejo Aitana">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Espejo compacto</div>
+            <h4 class="product-name">Espejo Aitana</h4>
+            <div class="product-price-row">
+              <span class="product-price">$50 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <p class="product-description">Espejo portátil con estuche, perfecto para cosmetiquera y viajes.</p>
+            <a href="https://imacril.com/products/espejo-aitana?_pos=1&_psq=aitan&_ss=e&_v=1.0" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Hanna -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Espejo_Hanna_Mesa_de_trabajo_1.jpg?v=1733762377" alt="Espejo Hanna">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Espejo compacto</div>
+            <h4 class="product-name">Espejo Hanna</h4>
+            <div class="product-price-row">
+              <span class="product-price">$23 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <p class="product-description">Espejo de mano con diseño sweet, ideal para llevar siempre en la bolsa.</p>
+            <a href="https://imacril.com/products/espejo-hanna?_pos=1&_psq=hanna&_ss=e&_v=1.0" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Mia -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Espejo_Mia_Mesa_de_trabajo_1.jpg?v=1733762954" alt="Espejo Mía">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Espejo compacto</div>
+            <h4 class="product-name">Espejo Mía</h4>
+            <div class="product-price-row">
+              <span class="product-price">$18 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <p class="product-description">Compacto con acabado dorado, perfecto como detalle o regalo.</p>
+            <a href="https://imacril.com/products/espejo-mia?_pos=1&_psq=mia&_ss=e&_v=1.0" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Estuche Charlotte -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Estuche_Charlotte_con_caja_Mesa_de_trabajo_1.jpg?v=1733761231" alt="Estuche Charlotte">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Estuche</div>
+            <h4 class="product-name">Estuche Charlotte</h4>
+            <div class="product-price-row">
+              <span class="product-price">$35 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <p class="product-description">Estuche versátil para maquillaje, skincare o accesorios de viaje.</p>
+            <a href="https://imacril.com/products/estuche-charlotte?_pos=1&_psq=charlo&_ss=e&_v=1.0" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Organizadores y kits -->
+    <section class="products-section">
+      <div class="products-heading-row">
+        <h3 class="products-heading">Organizadores y kits</h3>
+        <p class="products-subheading">Para maquillaje, skincare y joyería.</p>
+      </div>
+      <div class="products-grid">
+        <!-- Vanity Victoria bundle -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/VVFBB.jpg?v=1741359150" alt="Vanity Victoria Bundle">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Vanity + espejo + organizador</div>
+            <h4 class="product-name">Vanity Victoria · bundle completo</h4>
+            <div class="product-price-row">
+              <span class="product-price">$650 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <p class="product-description">Incluye Vanity Victoria, Espejo Olivia y Organizador Alessandra. El set completo para transformar tu espacio.</p>
+            <a href="https://imacril.com/products/vanity-victoria?_pos=8&_sid=145ec43fd&_ss=r" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Organizador Alaina -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Alaina.jpg?v=1731449414" alt="Organizador Alaina">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Organizador</div>
+            <h4 class="product-name">Organizador Alaina</h4>
+            <div class="product-price-row">
+              <span class="product-price">$50 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <div class="stock-pill">12 unidades disponibles</div>
+            <p class="product-description">Organizador de acrílico para skincare, maquillaje o nails. Ideal para mantener todo visible y ordenado.</p>
+            <a href="https://imacril.com/products/organizador-alaina?_pos=1&_psq=alai&_ss=e&_v=1.0" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Organizador Alessandra -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Alessandra_con_caja_Mesa_de_trabajo_1.jpg?v=1733759254" alt="Organizador Alessandra">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Organizador</div>
+            <h4 class="product-name">Organizador Alessandra</h4>
+            <div class="product-price-row">
+              <span class="product-price">$50 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <div class="stock-pill">36 unidades disponibles</div>
+            <p class="product-description">Organizador multiuso con cajones, perfecto para maquillaje, skincare o joyería.</p>
+            <a href="https://imacril.com/products/organizador-alessandra?_pos=1&_sid=d10d21602&_ss=r" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Kit Amelie -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Amelie_con_caja_Mesa_de_trabajo_1.jpg?v=1733761571" alt="Kit Amelie">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Kit</div>
+            <h4 class="product-name">Kit Amelie</h4>
+            <div class="product-price-row">
+              <span class="product-price">$55 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <div class="stock-pill">12 unidades disponibles</div>
+            <p class="product-description">Set de belleza perfecto para regalo o para iniciar tu colección Imacril.</p>
+            <a href="https://imacril.com/products/kit-amelie?_pos=1&_psq=ameli&_ss=e&_v=1.0" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Kit Madison -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Madison_con_caja_Mesa_de_trabajo_1.jpg?v=1733760289" alt="Kit Madison">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Kit</div>
+            <h4 class="product-name">Kit Madison</h4>
+            <div class="product-price-row">
+              <span class="product-price">$50 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <div class="stock-pill">41 unidades disponibles</div>
+            <p class="product-description">Kit organizador con tapa y espejo, ideal para joyería o maquillaje diario.</p>
+            <a href="https://imacril.com/products/kit-madison?_pos=1&_psq=madi&_ss=e&_v=1.0" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Kit Antonella -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <img class="product-image" src="https://cdn.shopify.com/s/files/1/0784/0848/3102/files/Antonella_con_caja.jpg?v=1733759822" alt="Kit Antonella">
+          </div>
+          <div class="product-body">
+            <div class="product-category-pill">Kit</div>
+            <h4 class="product-name">Kit Antonella</h4>
+            <div class="product-price-row">
+              <span class="product-price">$38 USD</span>
+              <span class="product-tag-intro">Intro</span>
+            </div>
+            <div class="stock-pill">35 unidades disponibles</div>
+            <p class="product-description">Kit ideal como primer organizador Imacril o como regalo especial.</p>
+            <a href="https://imacril.com/products/kit-antonella?_pos=1&_psq=anto&_ss=e&_v=1.0" target="_blank" class="product-link">
+              Ver detalles en Imacril <span>↗</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-section">
+      <h2 class="cta-title">¿Lista para materializar tu espacio soñado?</h2>
+      <p class="cta-text">
+        Envíame por WhatsApp los nombres de los productos que te interesan y te confirmo stock, tiempos de entrega y formas de pago para el área de The Woodlands y alrededores.
+      </p>
+      <a href="https://wa.me/19153148638" target="_blank" class="whatsapp-btn">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        WhatsApp · 915 314 8638
+      </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>Catálogo de introducción no oficial, basado en productos de <a href="https://imacril.com" target="_blank">imacril.com</a>.</p>
+      <p>Los precios están en USD para la zona de The Woodlands, TX y pueden cambiar sin previo aviso.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Botón flotante para imprimir / guardar en PDF
+    window.onload = function () {
+      const printBtn = document.createElement("button");
+      printBtn.innerHTML = "📄 Descargar como PDF";
+      printBtn.style.cssText = `
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        background: #c2416b;
+        color: white;
+        padding: 10px 18px;
+        border: none;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 10px 26px rgba(0,0,0,0.25);
+        z-index: 1000;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      `;
+      printBtn.onmouseover = () => printBtn.style.transform = "translateY(-1px)";
+      printBtn.onmouseout = () => printBtn.style.transform = "translateY(0)";
+      printBtn.onclick = () => window.print();
+      document.body.appendChild(printBtn);
+    };
+  </script>
 </body>
 </html>
