@@ -160,6 +160,13 @@ html {
   min-height: 160px;
 }
 
+.dashboard-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
 .section-pad {
   padding: 60px 0;
 }
