@@ -29,6 +29,7 @@ html {
 
 .section-pad {
   padding: 72px 0;
+  background: #ffffff;
 }
 
 .section-alt {
@@ -91,7 +92,7 @@ h3 {
 
 .card p,
 .card li {
-  color: var(--muted);
+  color: #2f2f2f;
 }
 
 .btn-primary {
@@ -233,9 +234,8 @@ h3 {
 }
 
 .hero-animate {
-  opacity: 0;
   transform: translateY(16px);
-  animation: fadeUp 700ms ease forwards;
+  animation: riseUp 700ms ease forwards;
 }
 
 .hero-animate.delay-1 {
@@ -250,13 +250,11 @@ h3 {
   animation-delay: 360ms;
 }
 
-@keyframes fadeUp {
+@keyframes riseUp {
   from {
-    opacity: 0;
     transform: translateY(16px);
   }
   to {
-    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -264,7 +262,7 @@ h3 {
 .card-media {
   border-radius: 16px;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(247, 0, 0, 0.08), rgba(0, 0, 0, 0.03));
+  background: linear-gradient(135deg, rgba(247, 0, 0, 0.08), rgba(255, 255, 255, 0.85));
 }
 
 .dashboard-image {
