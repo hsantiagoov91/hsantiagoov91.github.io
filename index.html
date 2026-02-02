@@ -12,26 +12,7 @@
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <style>
-    :root { --brand:#AD1403; --ink:#1b1b1b; --muted:#6b7280; --line:#e9ecef; }
-    body { font-family:'Red Hat Text',sans-serif; color:var(--ink); }
-    .navbar-brand img { max-height:32px; }
-    .hero { background:#000; color:#fff; padding:80px 0; text-align:center; }
-    .hero .title { font-family:'Red Hat Display',sans-serif; font-size:2.6rem; margin-bottom:1rem; }
-    .hero .sub { color:#ddd; font-size:1.1rem; max-width:700px; margin:0 auto 1.5rem; }
-    .btn-primary { background-color:#F70000; border:none; }
-    .btn-outline-light { border-color:#fff; color:#fff; }
-    .btn-outline-light:hover { background:#fff; color:#000; }
-    .section-title { font-family:'Red Hat Display',sans-serif; font-size:1.9rem; color:var(--brand); margin-top:40px; text-align:center; }
-    .card { border:1px solid var(--line); border-radius:14px; padding:1.5rem; }
-    .badge-brand { background:var(--brand); color:#fff; }
-    .eyebrow { text-transform:uppercase; letter-spacing:.08em; font-size:.8rem; color:#bdbdbd; }
-    .kpi { font-family:'Red Hat Display',sans-serif; font-size:1.6rem; }
-    .footer { background:#000; color:#fff; padding:28px 0; margin-top:60px; text-align:center; }
-    .logo-hero { max-height:88px; margin-bottom:16px; }
-    .link-inverse { color:#fff; text-decoration:none; }
-    .link-inverse:hover { text-decoration:underline; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -56,88 +37,259 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero text-center">
     <div class="container">
       <img src="logo-symbol.png" class="logo-hero" alt="Vosh symbol">
-      <p class="eyebrow mb-1">Industrial Systems</p>
-      <h1 class="title">Empowering Industrial Growth with Digital Solutions</h1>
-      <p class="sub">We install the operating cadence—BRM, dashboards, portals, and automation—that turns strategy into measurable execution across sales, operations, and customer experience.</p>
-      <div class="d-flex justify-content-center gap-2 flex-wrap">
-        <a href="contact.html" class="btn btn-primary">Talk to Vosh</a>
-        <a href="services.html" class="btn btn-outline-light">Explore Services</a>
-        <a href="brm.html" class="btn btn-outline-light">How BRM Works</a>
+      <p class="eyebrow mb-2 text-uppercase">Digital operating systems for industrial teams</p>
+      <h1 class="hero-title">From spreadsheets and email chaos to a digital operating system your team actually likes using.</h1>
+      <p class="hero-subtitle mx-auto mb-4">
+        We implement BRM views, dashboards, portals, and automations for industrial distributors, manufacturers, and OEM
+        programs in the US and Mexico — so your people can stop chasing spreadsheets and focus on customers, quality, and growth.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
+        <a href="contact.html" class="btn btn-primary">Book a 30-min discovery call</a>
+        <a href="#dashboards" class="btn btn-outline-light">See example dashboards</a>
       </div>
-      <div class="mt-4">
-        <span class="badge badge-brand">Innovation</span>
-        <span class="badge text-bg-light">Design Thinking</span>
-        <span class="badge text-bg-light">Sales Transformation</span>
-        <span class="badge text-bg-light">BRM · BI · Automation</span>
+      <div class="row g-3 justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div class="card hero-card p-4 text-start">
+            <p class="eyebrow text-white-50 mb-2">Before → After</p>
+            <ul class="hero-list mb-0">
+              <li>Email + Excel RFQs → BRM quoting and follow-ups in minutes</li>
+              <li>Manual reporting in spreadsheets → live dashboards for sales, OTIF, and releases</li>
+              <li>Leaders guessing from partial data → weekly KPI cadence from a single source of truth</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Value Props -->
-  <section class="container py-5">
-    <h2 class="section-title">What We Deliver</h2>
-    <div class="row g-4 mt-3 text-center">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card">
-          <h5>Sales Growth & GTM</h5>
-          <p>Practical U.S. routes-to-market, distributor/OEM programs, and binational standards that reduce lead time and risk.</p>
+  <!-- Problems We Fix -->
+  <section class="container section-pad">
+    <h2 class="section-title text-center">Problems we fix</h2>
+    <p class="section-subtitle mx-auto text-center mt-2">
+      We replace manual handoffs with one operating system so teams stop duplicating work and start running on the same playbook.
+    </p>
+    <div class="row g-4 mt-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card p-4 h-100">
+          <h6>Email and Excel RFQs</h6>
+          <p class="mb-0 text-muted">Reps and coordinators build quotes manually with no shared view or follow-up rhythm.</p>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card p-4 h-100">
+          <h6>No shared pipeline view</h6>
+          <p class="mb-0 text-muted">Sales, coordination, and leadership all see different numbers and priorities.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card p-4 h-100">
+          <h6>Leaders flying blind</h6>
+          <p class="mb-0 text-muted">No single scorecard means decisions get made from partial or outdated data.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card p-4 h-100">
+          <h6>Too many tools, no system</h6>
+          <p class="mb-0 text-muted">CRM, spreadsheets, portals, and inboxes don’t connect or reinforce each other.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Deliver -->
+  <section class="container section-pad">
+    <h2 class="section-title text-center">What we deliver</h2>
+    <p class="section-subtitle mx-auto text-center mt-2">
+      Three system layers that replace manual tasks with a repeatable operating cadence.
+    </p>
+    <div class="row g-4 mt-4">
+      <div class="col-12 col-lg-4">
+        <div class="card p-4 h-100">
+          <h5>Sales Growth Systems</h5>
+          <p class="text-muted">Faster quotes and cleaner pipelines that keep momentum moving.</p>
+          <ul class="bullet-muted">
+            <li>Digitalize and automate manual RFQ and quoting work.</li>
+            <li>Free reps and coordinators from admin and copy-paste.</li>
+            <li>Build a repeatable cadence for pipeline, follow-up, and win rate.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="card p-4 h-100">
           <h5>BRM Operating System</h5>
-          <p>Project-centric CRM/OS with fast quoting, structured follow-ups, and role-based views that reps and managers actually use.</p>
+          <p class="text-muted">Role-based views so sales, ops, and leadership run the same playbook.</p>
+          <ul class="bullet-muted">
+            <li>Digitalize workflows across quoting, releases, and follow-ups.</li>
+            <li>Remove status-chasing and manual handoffs for teams.</li>
+            <li>Deliver one system of record for pipeline, orders, and priorities.</li>
+          </ul>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card">
+      <div class="col-12 col-lg-4">
+        <div class="card p-4 h-100">
           <h5>BI & Automation</h5>
-          <p>Dashboards, apps, and workflow automations that establish KPIs and remove admin drag, making growth repeatable.</p>
+          <p class="text-muted">Dashboards and automations that keep KPIs honest and visible.</p>
+          <ul class="bullet-muted">
+            <li>Replace spreadsheet reporting with live scorecards.</li>
+            <li>Free leaders from manual reporting and data cleanups.</li>
+            <li>Build a trustworthy KPI rhythm that drives growth decisions.</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Outcomes -->
-  <section class="container pb-5">
-    <h2 class="section-title">Outcomes You Can Expect</h2>
-    <div class="row g-4 mt-3 text-center">
-      <div class="col-6 col-lg-3"><div class="card"><div class="kpi">2x+</div><p>Faster speed-to-quote</p></div></div>
-      <div class="col-6 col-lg-3"><div class="card"><div class="kpi">>97%</div><p>OTIF delivery support</p></div></div>
-      <div class="col-6 col-lg-3"><div class="card"><div class="kpi">90%+</div><p>Adoption of role-based views</p></div></div>
-      <div class="col-6 col-lg-3"><div class="card"><div class="kpi">Weekly</div><p>KPI cadence drives decisions</p></div></div>
+  <!-- Example Dashboards -->
+  <section id="dashboards" class="container section-pad">
+    <h2 class="section-title text-center">Example dashboards & portals</h2>
+    <p class="section-subtitle mx-auto text-center mt-2">
+      Typical BRM views, dashboards, and portals we install for industrial teams.
+    </p>
+    <div class="row g-4 mt-4">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p-4 h-100">
+          <div class="image-placeholder mb-3 d-flex align-items-center justify-content-center">
+            <span class="text-muted small">/images/dashboard-sales-cockpit.png</span>
+          </div>
+          <h6>Sales cockpit</h6>
+          <p class="text-muted mb-0">RFQs, quotes, and follow-ups in one view so reps stop hunting for status updates.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p-4 h-100">
+          <div class="image-placeholder mb-3 d-flex align-items-center justify-content-center">
+            <span class="text-muted small">/images/dashboard-otif-releases.png</span>
+          </div>
+          <h6>OTIF & release programs</h6>
+          <p class="text-muted mb-0">Live OTIF, release, and backorder tracking without spreadsheet swaps.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p-4 h-100">
+          <div class="image-placeholder mb-3 d-flex align-items-center justify-content-center">
+            <span class="text-muted small">/images/dashboard-executive-scorecard.png</span>
+          </div>
+          <h6>Executive scorecard</h6>
+          <p class="text-muted mb-0">One weekly view of pipeline, margin, and service KPIs that leadership trusts.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p-4 h-100">
+          <div class="image-placeholder mb-3 d-flex align-items-center justify-content-center">
+            <span class="text-muted small">/images/portal-customer-status.png</span>
+          </div>
+          <h6>Customer self-service portal</h6>
+          <p class="text-muted mb-0">Customers get order status, documents, and approvals without back-and-forth email.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p-4 h-100">
+          <div class="image-placeholder mb-3 d-flex align-items-center justify-content-center">
+            <span class="text-muted small">/images/portal-quote-approvals.png</span>
+          </div>
+          <h6>Quote approvals</h6>
+          <p class="text-muted mb-0">Approvals and revisions tracked in one flow so nothing stalls in inboxes.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p-4 h-100">
+          <div class="image-placeholder mb-3 d-flex align-items-center justify-content-center">
+            <span class="text-muted small">/images/dashboard-operations-control.png</span>
+          </div>
+          <h6>Operations control room</h6>
+          <p class="text-muted mb-0">Inventory, releases, and fulfillment signals aligned across ops and sales.</p>
+        </div>
+      </div>
     </div>
-    <p class="text-center text-muted mt-2">Sistematic growth based on plattforms under YOUR control. 
-      Targets guide design. Actual results vary by context and scope.</p>
+    <div class="text-center mt-4">
+      <a href="services.html" class="btn btn-primary">See how BRM works</a>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="container section-pad">
+    <h2 class="section-title text-center">Use cases</h2>
+    <p class="section-subtitle mx-auto text-center mt-2">
+      We install BRM, dashboards, and automations that fit your operating model, not the other way around.
+    </p>
+    <div class="row g-4 mt-4">
+      <div class="col-12 col-lg-6">
+        <div class="card p-4 h-100">
+          <h6>Distributors</h6>
+          <p class="text-muted">RFQs and multi-site requests flow through one quoting and follow-up rhythm.</p>
+          <ul class="bullet-muted">
+            <li>Typical: RFQs, special pricing, expediting updates.</li>
+            <li>Digitalize: quoting, approvals, and follow-up tasks.</li>
+            <li>Elevates teams with fewer status emails and more customer time.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="card p-4 h-100">
+          <h6>Manufacturers</h6>
+          <p class="text-muted">Release programs and OTIF performance tracked without manual reporting.</p>
+          <ul class="bullet-muted">
+            <li>Typical: releases, lead-time updates, customer portals.</li>
+            <li>Digitalize: release tracking, OTIF reporting, and alerts.</li>
+            <li>Elevates teams by reducing manual status updates and rework.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="card p-4 h-100">
+          <h6>OEM Programs</h6>
+          <p class="text-muted">Account-based programs stay aligned across stakeholders and timelines.</p>
+          <ul class="bullet-muted">
+            <li>Typical: multi-stakeholder RFQs and qualification steps.</li>
+            <li>Digitalize: stakeholder tracking, approvals, and KPI cadence.</li>
+            <li>Elevates teams with less data entry and clearer priorities.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="card p-4 h-100">
+          <h6>Service & field operations</h6>
+          <p class="text-muted">Field updates and service history stay visible to sales and leadership.</p>
+          <ul class="bullet-muted">
+            <li>Typical: service calls, inspections, and issue resolution.</li>
+            <li>Digitalize: work orders, follow-ups, and documentation.</li>
+            <li>Elevates teams with fewer calls and more time on quality.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- GROW Process -->
-  <section class="container pb-5">
-    <h2 class="section-title">How We Work (GROW)</h2>
-    <div class="row g-4 text-center mt-3">
+  <section class="container section-pad">
+    <h2 class="section-title text-center">How we work: The GROW framework</h2>
+    <p class="section-subtitle mx-auto text-center mt-2">
+      A clear cadence that installs the system without disrupting daily operations.
+    </p>
+    <div class="row g-4 text-center mt-4">
       <div class="col-12 col-lg-3">
-        <div class="card">
+        <div class="card p-4 h-100">
           <span class="eyebrow">G — Groundwork</span>
           <p>Map workflows, align KPIs, define owners, and set the operating cadence.</p>
         </div>
       </div>
       <div class="col-12 col-lg-3">
-        <div class="card">
+        <div class="card p-4 h-100">
           <span class="eyebrow">R — Rollout</span>
           <p>Stand up BRM, import data, configure views, and ship quick-win quotes and portals.</p>
         </div>
       </div>
       <div class="col-12 col-lg-3">
-        <div class="card">
+        <div class="card p-4 h-100">
           <span class="eyebrow">O — Optimization</span>
           <p>Automate follow-ups, embed dashboards, integrate systems, and tune pipeline quality.</p>
         </div>
       </div>
       <div class="col-12 col-lg-3">
-        <div class="card">
+        <div class="card p-4 h-100">
           <span class="eyebrow">W — Win & Scale</span>
           <p>Quarterly reviews, expansion modules, training, and leadership reporting.</p>
         </div>
@@ -150,13 +302,16 @@
   </section>
 
   <!-- Tools -->
-  <section class="container pb-5">
-    <h2 class="section-title">Tools We Use</h2>
-    <div class="row g-3 mt-2 text-center">
-      <div class="col-6 col-md-3"><div class="card">Power BI</div></div>
-      <div class="col-6 col-md-3"><div class="card">Low Code Apps</div></div>
-      <div class="col-6 col-md-3"><div class="card">Your Workspace</div></div>
-      <div class="col-6 col-md-3"><div class="card">AI Tools</div></div>
+  <section class="container section-pad">
+    <h2 class="section-title text-center">Tools & platforms</h2>
+    <p class="section-subtitle mx-auto text-center mt-2">
+      We connect the tools you already trust into one operating system and remove the spreadsheet handoffs.
+    </p>
+    <div class="row g-3 mt-4 text-center">
+      <div class="col-6 col-md-3"><div class="card card-soft p-3">Power BI</div></div>
+      <div class="col-6 col-md-3"><div class="card card-soft p-3">Low-Code Apps</div></div>
+      <div class="col-6 col-md-3"><div class="card card-soft p-3">Your Workspace</div></div>
+      <div class="col-6 col-md-3"><div class="card card-soft p-3">AI Tools</div></div>
     </div>
   </section>
 
@@ -171,4 +326,3 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
