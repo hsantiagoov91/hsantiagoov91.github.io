@@ -33,17 +33,45 @@
 
   <!-- Header -->
   <header class="container text-center mt-5">
-    <h1 class="section-title">Get in Touch</h1>
-    <p class="lead">Let’s talk about your business goals and how we can help.</p>
+    <h1 class="section-title">Send us your two most annoying manual tasks.</h1>
+    <p class="lead">
+      Share 2–3 repetitive workflows (RFQs, documentation packets, order status updates, release tracking).
+      We’ll show how BRM operating system views, dashboards, and automation can run them end‑to‑end.
+    </p>
   </header>
 
   <!-- Contact Info -->
-  <section class="container text-center mt-4">
-    <p class="mb-4">The best way to connect is by scheduling a discovery call:</p>
-    <a href="https://calendly.com/hsantiago-ov/appointments" target="_blank" class="btn btn-primary mb-4">Book a Meeting</a>
-
-    <p class="mt-4">Prefer to write?</p>
-    <a href="mailto:info@jvosh.com" class="btn btn-outline-secondary">Email Us: info@jvosh.com</a>
+  <section class="container mt-4">
+    <div class="text-center">
+      <a href="https://calendly.com/hsantiago-ov/appointments" target="_blank" class="btn btn-primary mb-4">Book a 30-min discovery call</a>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-12 col-lg-8">
+        <form class="card p-4">
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <label for="contactName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="contactName" name="name" autocomplete="name">
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="contactCompany" class="form-label">Company</label>
+              <input type="text" class="form-control" id="contactCompany" name="company" autocomplete="organization">
+            </div>
+            <div class="col-12">
+              <label for="contactEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="contactEmail" name="email" autocomplete="email">
+            </div>
+            <div class="col-12">
+              <label for="contactWorkflows" class="form-label">What manual workflows do you want to fix?</label>
+              <textarea class="form-control" id="contactWorkflows" name="workflows" rows="4"></textarea>
+            </div>
+            <div class="col-12 text-center">
+              <a href="mailto:info@jvosh.com" class="btn btn-outline-secondary">Email Us: info@jvosh.com</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
