@@ -13,6 +13,10 @@ body {
   background: var(--soft);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .navbar-brand img {
   max-height: 40px;
 }
