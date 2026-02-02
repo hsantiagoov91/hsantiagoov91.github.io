@@ -3,11 +3,15 @@
   --brand-dark: #ad1403;
   --ink: #000000;
   --ink-soft: #1f1f1f;
-  --muted: #4b4b4b;
+  --muted: #3a3a3a;
   --line: #e7e7e7;
   --paper: #ffffff;
   --soft: #f9f9fb;
   --base: #ffffff;
+}
+
+:root {
+  color-scheme: light;
 }
 
 body {
@@ -262,7 +266,7 @@ h3 {
 .card-media {
   border-radius: 16px;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(247, 0, 0, 0.08), rgba(255, 255, 255, 0.85));
+  background: var(--soft);
 }
 
 .dashboard-image {
