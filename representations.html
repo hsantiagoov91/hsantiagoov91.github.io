@@ -25,15 +25,20 @@
   <meta property="og:image" content="https://jvosh.com/logo.png" />
 
   <style>
-    body { font-family: 'Red Hat Text', sans-serif; background-color: #f8f9fa; }
+    :root { --brand:#f70000; --brand-dark:#ad1403; --ink:#000000; --muted:#4b4b4b; --line:#e7e7e7; }
+    body { font-family: 'Red Hat Text', sans-serif; background-color: #ffffff; color: var(--ink); }
     .navbar-brand img { max-height: 40px; }
-    .section-title { font-family: 'Red Hat Display', sans-serif; font-size: 1.8rem; color: #AD1403; margin-top: 40px; }
-    .btn-primary { background-color: #F70000; border: none; }
-    .btn-outline-primary { border-color: #F70000; color: #F70000; }
-    .btn-outline-primary:hover { background-color: #F70000; color: #fff; }
-    .card-shadow { box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+    .section-title { font-family: 'Red Hat Display', sans-serif; font-size: 1.8rem; color: var(--ink); margin-top: 40px; }
+    .btn-primary { background-color: var(--brand); border: none; }
+    .btn-outline-primary { border-color: var(--brand); color: var(--brand); background:#ffffff; }
+    .btn-outline-primary:hover { background-color: var(--brand); color: #fff; border-color: var(--brand); }
+    .card-shadow { box-shadow: 0 10px 24px rgba(15,23,42,0.08); border: 1px solid var(--line); border-radius: 16px; }
     .chart-container { position: relative; width: 100%; height: 260px; }
-    .footer { background-color: #000; color: #fff; padding: 30px 0; margin-top: 60px; }
+    .footer { background-color: #ffffff; color: var(--ink); padding: 30px 0; margin-top: 60px; border-top: 1px solid var(--line); }
+    .text-danger { color: var(--brand-dark) !important; }
+    .nav-pills .nav-link { border: 1px solid var(--line); color: var(--muted); }
+    .nav-pills .nav-link.active { background: var(--brand); border-color: var(--brand); color:#fff; }
+    .lead { color: var(--muted); }
   </style>
 </head>
 <body>
@@ -275,8 +280,8 @@
           datasets: [{
             label: 'Specialization',
             data: values,
-            backgroundColor: '#dc3545',
-            borderColor: '#AD1403',
+            backgroundColor: '#f70000',
+            borderColor: '#ad1403',
             borderWidth: 1
           }]
         },
@@ -321,11 +326,11 @@
         datasets: [{
           data: [10,10,10,10,10],
           backgroundColor: [
-            'rgba(220,53,69,0.7)',
-            'rgba(13,110,253,0.7)',
-            'rgba(25,135,84,0.7)',
-            'rgba(255,193,7,0.7)',
-            'rgba(13,202,240,0.7)'
+            'rgba(247,0,0,0.7)',
+            'rgba(173,20,3,0.7)',
+            'rgba(0,0,0,0.7)',
+            'rgba(75,75,75,0.7)',
+            'rgba(160,160,160,0.7)'
           ]
         }]
       },
@@ -334,4 +339,3 @@
   </script>
 </body>
 </html>
-
