@@ -24,7 +24,7 @@
               <h1 class="text-2xl font-semibold text-black">Vosh Vanity Solutions</h1>
             </div>
           </div>
-          <a href="contact.html" class="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-lg bg-red-600 text-white shadow">Talk to Sales</a>
+          <a href="contact.html" class="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-lg bg-red-50 text-red-700 border border-red-200 shadow">Talk to Sales</a>
         </div>
         <div class="grid md:grid-cols-2 gap-10 items-center">
           <div>
@@ -92,7 +92,7 @@
     function ImageModal({ images, productName, isOpen, onClose }) {
       if (!isOpen) return null;
       return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4" role="dialog" aria-modal="true">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white px-4" role="dialog" aria-modal="true">
           <div className="bg-white max-w-3xl w-full rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
             <div className="flex justify-between items-center px-6 py-4 border-b border-gray-200">
               <div>
@@ -127,15 +127,15 @@
                 <img
                   src={bundle.images[0]}
                   alt={bundle.name}
-                  className={`w-full h-full object-cover ${isOutOfStock ? "opacity-60 grayscale" : ""}`}
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                <div className="absolute top-4 left-4 bg-red-50 text-red-700 border border-red-200 px-4 py-2 rounded-full flex items-center gap-2">
                   <Package className="size-5" />
                   <span>Bundle Deal</span>
                 </div>
                 {isOutOfStock && (
                   <div className="absolute top-4 right-4">
-                    <div className="bg-gray-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                    <div className="bg-white text-gray-800 border border-gray-300 px-4 py-2 rounded-full flex items-center gap-2">
                       <AlertCircle className="size-5" />
                       <span>Out of Stock</span>
                     </div>
@@ -168,7 +168,7 @@
 
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="flex items-center justify-center gap-2 w-full bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700 transition-colors"
+                  className="flex items-center justify-center gap-2 w-full bg-red-50 text-red-700 border border-red-200 py-3 px-6 rounded-lg hover:bg-red-100 transition-colors"
                 >
                   View Bundle Details
                   <Eye className="size-5" />
