@@ -20,18 +20,24 @@
   <meta property="og:url" content="https://your-domain.github.io/about.html" />
 
   <style>
-    :root { --brand:#AD1403; --ink:#1b1b1b; --muted:#6b7280; --line:#eeeeee; }
-    body { font-family:'Red Hat Text',sans-serif; color:var(--ink); }
-    .section-title { font-family:'Red Hat Display',sans-serif; font-size:1.9rem; color:var(--brand); margin-top:40px; }
-    .lead { color:#222; }
-    .footer { background:#000; color:#fff; padding:28px 0; margin-top:60px; }
+    :root { --brand:#f70000; --brand-dark:#ad1403; --ink:#000000; --muted:#4b4b4b; --line:#e7e7e7; }
+    body { font-family:'Red Hat Text',sans-serif; color:var(--ink); background:#ffffff; }
+    .section-title { font-family:'Red Hat Display',sans-serif; font-size:1.9rem; color:var(--ink); margin-top:40px; }
+    .lead { color:#1f1f1f; }
+    .footer { background:#ffffff; color:var(--ink); padding:28px 0; margin-top:60px; border-top:1px solid var(--line); }
     .container p { font-size:1.06rem; }
     .badge-brand { background:var(--brand); }
     .muted { color:var(--muted); }
-    .card { border:1px solid var(--line); border-radius:14px; }
+    .card { border:1px solid var(--line); border-radius:14px; box-shadow:0 12px 24px rgba(15,23,42,0.08); }
     a.text-brand { color:var(--brand); text-decoration:none; }
     a.text-brand:hover { text-decoration:underline; }
     .icon { width:18px; height:18px; vertical-align:-3px; }
+    .btn-primary { background:var(--brand); border-color:var(--brand); color:#ffffff; border-radius:999px; font-weight:700; }
+    .btn-primary:hover { background:#d70000; border-color:#d70000; color:#ffffff; }
+    .btn-dark { background:var(--brand); border-color:var(--brand); color:#ffffff; border-radius:999px; font-weight:700; }
+    .btn-dark:hover { background:#d70000; border-color:#d70000; color:#ffffff; }
+    .btn-outline-dark { border-color:var(--brand); color:var(--brand); border-radius:999px; font-weight:600; background:#ffffff; }
+    .btn-outline-dark:hover { background:var(--brand); color:#ffffff; border-color:var(--brand); }
   </style>
 </head>
 <body>
@@ -152,7 +158,7 @@
       I collaborate with distributors, OEMs, and founders who value reliability and clear execution. If you are building in fasteners or related industrial supply, I am open to talk.
     </p>
     <div class="d-flex gap-2">
-      <a class="btn btn-dark" href="mailto:info@jvosh.com">Email Santiago</a>
+      <a class="btn btn-primary" href="mailto:info@jvosh.com">Email Santiago</a>
       <a class="btn btn-outline-dark" href="tel:+19153148807">Call</a>
       <a class="btn btn-outline-dark" href="https://www.linkedin.com/in/santiago-ortiz-vivo/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
@@ -163,7 +169,7 @@
   <footer class="footer">
     <div class="container text-center">
       <p class="mb-1">&copy; 2025 Vosh Business Solutions</p>
-      <p class="mb-0">Contact: <a class="text-white" href="tel:+19153148807">+1 915 314 8807</a> · <a class="text-white" href="mailto:info@jvosh.com">info@jvosh.com</a></p>
+      <p class="mb-0">Contact: <a class="text-brand" href="tel:+19153148807">+1 915 314 8807</a> · <a class="text-brand" href="mailto:info@jvosh.com">info@jvosh.com</a></p>
     </div>
   </footer>
 

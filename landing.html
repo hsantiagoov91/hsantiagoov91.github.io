@@ -5,37 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bundle Landing | Vosh</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600;700&family=Red+Hat+Text:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family:'Inter', system-ui, -apple-system, sans-serif; }
-    .glass-card { backdrop-filter: blur(16px); background: rgba(255,255,255,0.08); }
+    body { font-family:'Red Hat Text', system-ui, -apple-system, sans-serif; }
+    .glass-card { background: #ffffff; border: 1px solid #e7e7e7; }
   </style>
 </head>
-<body class="bg-gray-950 text-white">
-  <div class="min-h-screen bg-gradient-to-b from-gray-950 via-purple-950/40 to-gray-950">
+<body class="bg-white text-black">
+  <div class="min-h-screen bg-white">
     <header class="relative overflow-hidden">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(236,72,153,0.18),_rgba(59,7,100,0))]"></div>
-      <div class="relative max-w-6xl mx-auto px-6 py-12 md:py-16">
+      <div class="relative max-w-6xl mx-auto px-6 py-12 md:py-16 border-b border-gray-200">
         <div class="flex items-center justify-between mb-10">
           <div class="flex items-center gap-3">
             <img src="logo-symbol.png" class="h-10 w-10" alt="Vosh"> 
             <div>
-              <p class="text-xs uppercase tracking-[0.3em] text-pink-200">Bundles</p>
-              <h1 class="text-2xl font-semibold">Vosh Vanity Solutions</h1>
+              <p class="text-xs uppercase tracking-[0.3em] text-gray-500">Bundles</p>
+              <h1 class="text-2xl font-semibold text-black">Vosh Vanity Solutions</h1>
             </div>
           </div>
-          <a href="contact.html" class="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-lg bg-white text-pink-700 shadow">Talk to Sales</a>
+          <a href="contact.html" class="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-lg bg-red-600 text-white shadow">Talk to Sales</a>
         </div>
         <div class="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <p class="text-sm uppercase tracking-[0.3em] text-pink-200 mb-2">Curated Combos</p>
-            <h2 class="text-4xl md:text-5xl font-bold leading-tight text-white mb-4">Build a complete vanity with one bundle.</h2>
-            <p class="text-lg text-pink-50/80 max-w-xl mb-6">Choose a pre-configured set with basin, faucet, mirror, and matching accessories. Transparent pricing, premium finishes, and free delivery to The Woodlands.</p>
+            <p class="text-sm uppercase tracking-[0.3em] text-gray-500 mb-2">Curated Combos</p>
+            <h2 class="text-4xl md:text-5xl font-bold leading-tight text-black mb-4">Build a complete vanity with one bundle.</h2>
+            <p class="text-lg text-gray-600 max-w-xl mb-6">Choose a pre-configured set with basin, faucet, mirror, and matching accessories. Transparent pricing, premium finishes, and free delivery to The Woodlands.</p>
             <div class="flex flex-wrap gap-3">
-              <span class="glass-card text-sm px-3 py-1 rounded-full border border-pink-500/40">Save 15% vs buying separately</span>
-              <span class="glass-card text-sm px-3 py-1 rounded-full border border-pink-500/40">Curated by designers</span>
-              <span class="glass-card text-sm px-3 py-1 rounded-full border border-pink-500/40">Install-ready</span>
+              <span class="glass-card text-sm px-3 py-1 rounded-full">Save 15% vs buying separately</span>
+              <span class="glass-card text-sm px-3 py-1 rounded-full">Curated by designers</span>
+              <span class="glass-card text-sm px-3 py-1 rounded-full">Install-ready</span>
             </div>
           </div>
           <div id="bundle-root"></div>
@@ -93,14 +92,14 @@
     function ImageModal({ images, productName, isOpen, onClose }) {
       if (!isOpen) return null;
       return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4" role="dialog" aria-modal="true">
-          <div className="bg-gray-900 max-w-3xl w-full rounded-2xl overflow-hidden shadow-2xl border border-pink-500/40">
-            <div className="flex justify-between items-center px-6 py-4 border-b border-pink-500/30">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4" role="dialog" aria-modal="true">
+          <div className="bg-white max-w-3xl w-full rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+            <div className="flex justify-between items-center px-6 py-4 border-b border-gray-200">
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-pink-200">Gallery</p>
-                <h3 className="text-lg font-semibold text-white">{productName}</h3>
+                <p className="text-xs uppercase tracking-[0.3em] text-gray-500">Gallery</p>
+                <h3 className="text-lg font-semibold text-black">{productName}</h3>
               </div>
-              <button aria-label="Close" onClick={onClose} className="text-pink-100 hover:text-white transition">
+              <button aria-label="Close" onClick={onClose} className="text-gray-500 hover:text-black transition">
                 <X className="size-6" />
               </button>
             </div>
@@ -122,7 +121,7 @@
 
       return (
         <>
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-pink-600 to-purple-600 rounded-2xl shadow-2xl overflow-hidden">
+          <div className="max-w-4xl mx-auto bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
             <div className="grid md:grid-cols-2 gap-0">
               <div className="relative aspect-square md:aspect-auto overflow-hidden">
                 <img
@@ -130,13 +129,13 @@
                   alt={bundle.name}
                   className={`w-full h-full object-cover ${isOutOfStock ? "opacity-60 grayscale" : ""}`}
                 />
-                <div className="absolute top-4 left-4 bg-yellow-400 text-gray-900 px-4 py-2 rounded-full flex items-center gap-2">
+                <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full flex items-center gap-2">
                   <Package className="size-5" />
                   <span>Bundle Deal</span>
                 </div>
                 {isOutOfStock && (
                   <div className="absolute top-4 right-4">
-                    <div className="bg-gray-500 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                    <div className="bg-gray-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
                       <AlertCircle className="size-5" />
                       <span>Out of Stock</span>
                     </div>
@@ -144,32 +143,32 @@
                 )}
               </div>
 
-              <div className="p-8 sm:p-10 text-white flex flex-col justify-center">
-                <h3 className="mb-2 text-white text-2xl font-semibold">{bundle.name}</h3>
-                <p className="text-pink-100 mb-6">Complete vanity solution with everything you need</p>
+              <div className="p-8 sm:p-10 text-black flex flex-col justify-center">
+                <h3 className="mb-2 text-black text-2xl font-semibold">{bundle.name}</h3>
+                <p className="text-gray-600 mb-6">Complete vanity solution with everything you need</p>
 
                 <div className="mb-6 space-y-3">
-                  <p className="text-pink-100">This bundle includes:</p>
+                  <p className="text-gray-600">This bundle includes:</p>
                   {bundle.items.map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <Check className="size-5 text-pink-300 flex-shrink-0 mt-0.5" />
-                      <span className="text-white">{item.name}</span>
+                      <Check className="size-5 text-red-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-black">{item.name}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="mb-6 pt-6 border-t border-pink-400">
-                  <p className="text-pink-100 mb-1">Bundle Price (Save 15%)</p>
-                  <p className="text-white text-2xl font-semibold">${bundle.price} USD</p>
-                  <p className="text-pink-100 mt-2">Free delivery to The Woodlands included</p>
+                <div className="mb-6 pt-6 border-t border-gray-200">
+                  <p className="text-gray-600 mb-1">Bundle Price (Save 15%)</p>
+                  <p className="text-black text-2xl font-semibold">${bundle.price} USD</p>
+                  <p className="text-gray-600 mt-2">Free delivery to The Woodlands included</p>
                   {isOutOfStock && (
-                    <p className="text-yellow-300 mt-3">Currently unavailable - Contact us for availability</p>
+                    <p className="text-red-600 mt-3">Currently unavailable - Contact us for availability</p>
                   )}
                 </div>
 
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="flex items-center justify-center gap-2 w-full bg-white text-pink-600 py-3 px-6 rounded-lg hover:bg-pink-50 transition-colors"
+                  className="flex items-center justify-center gap-2 w-full bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700 transition-colors"
                 >
                   View Bundle Details
                   <Eye className="size-5" />
