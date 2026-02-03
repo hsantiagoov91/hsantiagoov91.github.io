@@ -10,8 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600;700&family=Red+Hat+Text:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    :root { --brand:#f70000; --brand-dark:#ad1403; --line:#e6e6e6; }
     body { font-family:'Red Hat Text', system-ui, -apple-system, sans-serif; }
-    .glass-card { background: #ffffff; border: 1px solid #e7e7e7; }
+    .glass-card { background: #ffffff; border: 1px solid var(--line); }
+    .brand-cta { background: rgba(247, 0, 0, 0.08); color: var(--brand-dark); border: 1px solid rgba(247, 0, 0, 0.25); }
+    .brand-cta:hover { background: rgba(247, 0, 0, 0.16); }
+    .text-brand { color: var(--brand); }
+    .text-brand-dark { color: var(--brand-dark); }
   </style>
 </head>
 <body class="bg-white text-black">
@@ -26,7 +31,7 @@
               <h1 class="text-2xl font-semibold text-black">Vosh Vanity Solutions</h1>
             </div>
           </div>
-          <a href="contact.html" class="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-lg bg-red-50 text-red-700 border border-red-200 shadow">Talk to Sales</a>
+          <a href="contact.html" class="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-lg brand-cta shadow">Talk to Sales</a>
         </div>
         <div class="grid md:grid-cols-2 gap-10 items-center">
           <div>
@@ -131,7 +136,7 @@
                   alt={bundle.name}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-4 left-4 bg-red-50 text-red-700 border border-red-200 px-4 py-2 rounded-full flex items-center gap-2">
+                <div className="absolute top-4 left-4 brand-cta px-4 py-2 rounded-full flex items-center gap-2">
                   <Package className="size-5" />
                   <span>Bundle Deal</span>
                 </div>
@@ -153,7 +158,7 @@
                   <p className="text-gray-600">This bundle includes:</p>
                   {bundle.items.map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <Check className="size-5 text-red-600 flex-shrink-0 mt-0.5" />
+                      <Check className="size-5 text-brand flex-shrink-0 mt-0.5" />
                       <span className="text-black">{item.name}</span>
                     </div>
                   ))}
@@ -164,13 +169,13 @@
                   <p className="text-black text-2xl font-semibold">${bundle.price} USD</p>
                   <p className="text-gray-600 mt-2">Free delivery to The Woodlands included</p>
                   {isOutOfStock && (
-                    <p className="text-red-600 mt-3">Currently unavailable - Contact us for availability</p>
+                    <p className="text-brand-dark mt-3">Currently unavailable - Contact us for availability</p>
                   )}
                 </div>
 
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="flex items-center justify-center gap-2 w-full bg-red-50 text-red-700 border border-red-200 py-3 px-6 rounded-lg hover:bg-red-100 transition-colors"
+                  className="flex items-center justify-center gap-2 w-full brand-cta py-3 px-6 rounded-lg transition-colors"
                 >
                   View Bundle Details
                   <Eye className="size-5" />
