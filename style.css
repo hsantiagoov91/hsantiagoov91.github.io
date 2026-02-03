@@ -64,6 +64,76 @@ h3 {
   font-size: 1.05rem;
 }
 
+.ui-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #ffffff;
+  padding: 26px 28px;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+  height: 100%;
+}
+
+.ui-card-tight {
+  padding: 22px 22px;
+}
+
+.ui-card-title {
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.55rem;
+  font-size: 1.05rem;
+}
+
+.ui-card-body {
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.ui-card-footnote {
+  color: var(--ink);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.ui-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 1rem;
+  display: grid;
+  gap: 0.5rem;
+  color: var(--muted);
+}
+
+.ui-list li {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.ui-list li::before {
+  content: "•";
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.promise-grid {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.promise-pill {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  font-weight: 600;
+  color: var(--ink);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -257,6 +327,37 @@ h3 {
   font-weight: 500;
   color: var(--ink);
   letter-spacing: 0.01em;
+}
+
+.outcome-grid {
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.step-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid var(--brand);
+  color: var(--brand);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.contrast-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .card-media {
@@ -535,6 +636,14 @@ h3 {
 
   .process-steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contrast-grid {
+    grid-template-columns: 1fr;
   }
 }
 
