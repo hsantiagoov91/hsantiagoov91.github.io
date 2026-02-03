@@ -328,6 +328,182 @@ h3 {
   color: var(--brand-dark);
 }
 
+.services-page .container {
+  max-width: 1080px;
+}
+
+.services-hero {
+  background: #0e0f12;
+  color: #f5f5f5;
+  padding: 120px 0 110px;
+  border-bottom: 1px solid #1f232b;
+}
+
+.services-hero .eyebrow {
+  color: #b6bcc6;
+}
+
+.services-hero-inner {
+  max-width: 860px;
+}
+
+.services-hero-title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.services-hero-subtitle {
+  font-size: 1.2rem;
+  color: #d5d9e0;
+  margin-bottom: 2.5rem;
+}
+
+.services-hero-cta .btn {
+  border-radius: 999px;
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+}
+
+.services-section {
+  padding: 96px 0;
+}
+
+.services-section.section-alt {
+  background: var(--soft);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.section-heading {
+  max-width: 720px;
+}
+
+.editorial-block {
+  max-width: 680px;
+}
+
+.editorial-lead {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+  color: var(--ink);
+}
+
+.editorial-body {
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.services-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px 32px;
+  background: #ffffff;
+  height: 100%;
+}
+
+.services-card h3 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.services-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.deep-dive-text p {
+  max-width: 520px;
+  color: var(--muted);
+}
+
+.deep-dive-space {
+  min-height: 200px;
+}
+
+.deep-dive-centered {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.outcome-block {
+  border-left: 2px solid var(--brand);
+  padding-left: 18px;
+  margin-top: 1.75rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.outcome-block.centered {
+  border-left: none;
+  border-top: 2px solid var(--brand);
+  padding: 18px 0 0;
+  max-width: 360px;
+  margin: 2rem auto 0;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin: 2.5rem 0 2rem;
+}
+
+.process-step {
+  padding: 20px 16px;
+  border-top: 1px solid var(--line);
+}
+
+.process-step h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0;
+}
+
+.anchor-line {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.contrast-card {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+  height: 100%;
+}
+
+.contrast-card h3 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.contrast-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+
+.services-cta {
+  padding: 96px 0 110px;
+  background: #0f1115;
+  color: #f5f5f5;
+}
+
+.services-cta .section-title {
+  color: #ffffff;
+  max-width: 720px;
+}
+
+.cta-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 @media (max-width: 991px) {
   .section-pad {
     padding: 56px 0;
@@ -339,6 +515,14 @@ h3 {
 
   .card-panel {
     padding: 24px;
+  }
+
+  .services-section {
+    padding: 72px 0;
+  }
+
+  .process-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -353,5 +537,21 @@ h3 {
 
   .row.g-4 {
     row-gap: 20px;
+  }
+
+  .services-hero {
+    padding: 90px 0 80px;
+  }
+
+  .services-hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .services-section {
+    padding: 64px 0;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
   }
 }
