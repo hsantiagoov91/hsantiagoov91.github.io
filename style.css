@@ -329,14 +329,14 @@ h3 {
 }
 
 .services-hero {
-  background: #0e0f12;
-  color: #f5f5f5;
-  padding: 120px 0 110px;
-  border-bottom: 1px solid #1f232b;
+  background: #ffffff;
+  color: var(--ink);
+  padding: 108px 0 96px;
+  border-bottom: 1px solid var(--line);
 }
 
 .services-hero .eyebrow {
-  color: #b6bcc6;
+  color: #5c5c5c;
 }
 
 .services-hero-inner {
@@ -344,16 +344,16 @@ h3 {
 }
 
 .services-hero-title {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.6rem, 4.6vw, 3.8rem);
   line-height: 1.1;
   margin-bottom: 1.5rem;
 }
 
 .services-hero-subtitle {
   font-size: 1.2rem;
-  color: #d5d9e0;
-  margin-bottom: 2.5rem;
+  color: var(--muted);
+  margin-bottom: 0;
 }
 
 .services-hero-cta .btn {
@@ -381,8 +381,8 @@ h3 {
 }
 
 .editorial-lead {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
   line-height: 1.25;
   margin-bottom: 1.5rem;
   color: var(--ink);
@@ -391,6 +391,10 @@ h3 {
 .editorial-body {
   font-size: 1.05rem;
   color: var(--muted);
+}
+
+.pillar-block {
+  max-width: 760px;
 }
 
 .services-card {
@@ -402,7 +406,7 @@ h3 {
 }
 
 .services-card h3 {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: inherit;
   font-size: 1.35rem;
   margin-bottom: 0.75rem;
 }
@@ -425,6 +429,10 @@ h3 {
   text-align: center;
   max-width: 760px;
   margin: 0 auto;
+}
+
+.services-section-spacious {
+  padding: 120px 0;
 }
 
 .outcome-block {
@@ -460,6 +468,11 @@ h3 {
   margin-bottom: 0;
 }
 
+.process-step p {
+  margin-bottom: 0;
+  font-size: 1.05rem;
+}
+
 .anchor-line {
   font-size: 1.1rem;
   color: var(--muted);
@@ -472,25 +485,19 @@ h3 {
 }
 
 .contrast-card h3 {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: inherit;
   font-size: 1.25rem;
   margin-bottom: 1rem;
 }
 
-.contrast-card ul {
-  margin: 0;
-  padding-left: 1.1rem;
-  color: var(--muted);
-}
-
 .services-cta {
   padding: 96px 0 110px;
-  background: #0f1115;
-  color: #f5f5f5;
+  background: #ffffff;
+  color: var(--ink);
 }
 
 .services-cta .section-title {
-  color: #ffffff;
+  color: var(--ink);
   max-width: 720px;
 }
 
@@ -498,6 +505,15 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.contrast-lines p {
+  margin-bottom: 0.65rem;
+  color: var(--muted);
+}
+
+.contrast-lines p:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 991px) {
@@ -536,7 +552,7 @@ h3 {
   }
 
   .services-hero {
-    padding: 90px 0 80px;
+    padding: 84px 0 72px;
   }
 
   .services-hero-subtitle {
