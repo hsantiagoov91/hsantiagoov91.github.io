@@ -9,7 +9,7 @@
 
   <!-- Favicon & Fonts -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&family=Red+Hat+Text:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600;700&family=Red+Hat+Text:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,12 +21,6 @@
   <meta property="og:description" content="Vosh installs operating structure so industrial companies can grow without chaos. Clear rules, ownership, and visibility make the business easier to run and easier to scale." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://your-domain.github.io/services.html" />
-
-  <style>
-    .lead { color:var(--muted); }
-    .check::before { content:"✓ "; color:var(--brand); font-weight:700; }
-    .muted { color:var(--muted); }
-  </style>
 
   <!-- Schema (Service) -->
   <script type="application/ld+json">
@@ -46,7 +40,7 @@
   }
   </script>
 </head>
-<body>
+<body class="services-page">
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-light border-bottom" aria-label="Primary">
@@ -68,165 +62,211 @@
     </div>
   </nav>
 
-  <!-- Header -->
-  <header class="container text-center mt-5">
-    <p class="eyebrow mb-1">Services</p>
-    <h1 class="section-title mb-2">What Vosh helps industrial companies do</h1>
-    <p class="lead">We don’t add complexity. We remove confusion, bottlenecks, and dependency on individuals.</p>
-    <p class="mb-0">
-      Vosh works with industrial companies that have good products and good people — but lack clear structure.
-      The goal is simple: make the business easier to run, easier to grow, and less dependent on constant firefighting.
-    </p>
+  <!-- Hero -->
+  <header class="services-hero">
+    <div class="container">
+      <div class="services-hero-inner">
+        <p class="eyebrow text-uppercase">Services</p>
+        <h1 class="services-hero-title">Services built to bring order to industrial businesses</h1>
+        <p class="services-hero-subtitle">Not more tools.<br>Not more noise.<br>Just structure that works.</p>
+        <div class="services-hero-cta">
+          <a class="btn btn-light" href="mailto:info@jvosh.com">Talk with Vosh</a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <!-- Core Services -->
-  <section class="container mt-5">
-    <h2 class="section-title">Bring clarity to how the business runs</h2>
-    <p class="mb-3">Many companies operate based on habit, memory, and urgency.</p>
-    <p class="mb-3">Vosh helps define:</p>
-    <ul class="mb-3">
-      <li>How work actually flows</li>
-      <li>Who owns what</li>
-      <li>What decisions matter</li>
-    </ul>
-    <p class="mb-3">So the company runs on clear rules instead of constant follow-ups.</p>
-    <p class="mb-2"><strong>What this includes:</strong></p>
-    <ul class="mb-3">
-      <li>Mapping how sales, operations, and delivery really work</li>
-      <li>Defining responsibilities and handoffs</li>
-      <li>Making expectations visible and repeatable</li>
-    </ul>
-    <p class="mb-0"><strong>Outcome:</strong> People stop guessing. Work becomes predictable.</p>
-  </section>
-
-  <!-- For Your People -->
-  <section class="container mt-5">
-    <h2 class="section-title">Make selling reliable, not heroic</h2>
-    <p class="mb-3">In many industrial businesses, sales depend on individual effort.</p>
-    <p class="mb-3">Vosh helps build a commercial structure where:</p>
-    <ul class="mb-3">
-      <li>Opportunities are visible</li>
-      <li>Follow-up is consistent</li>
-      <li>Promises match reality</li>
-    </ul>
-    <p class="mb-2"><strong>What this includes:</strong></p>
-    <ul class="mb-3">
-      <li>Clear rules for quoting and follow-up</li>
-      <li>Visibility into pipeline and priorities</li>
-      <li>Alignment between sales and operations</li>
-    </ul>
-    <p class="mb-0"><strong>Outcome:</strong> Sales becomes a system — not a personality trait.</p>
-  </section>
-
-  <!-- Outcomes -->
-  <section class="container mt-5">
-    <h2 class="section-title">See the business without chasing information</h2>
-    <p class="mb-3">Leaders often spend too much time asking for updates and too little time deciding.</p>
-    <p class="mb-3">Vosh creates simple visibility so leaders can:</p>
-    <ul class="mb-3">
-      <li>See what is happening</li>
-      <li>Understand what is off-track</li>
-      <li>Decide calmly</li>
-    </ul>
-    <p class="mb-2"><strong>What this includes:</strong></p>
-    <ul class="mb-3">
-      <li>Defining the few numbers that actually matter</li>
-      <li>Making information visible in one place</li>
-      <li>Creating a regular review rhythm</li>
-    </ul>
-    <p class="mb-0"><strong>Outcome:</strong> Less noise. Better decisions.</p>
-  </section>
-
-  <!-- Packages -->
-  <section class="container mt-5">
-    <h2 class="section-title">Use systems to support people — not replace them</h2>
-    <p class="mb-3">Tools are useful only when they support clear thinking and good habits.</p>
-    <p class="mb-3">Vosh designs systems that:</p>
-    <ul class="mb-3">
-      <li>Reduce manual work</li>
-      <li>Prevent errors</li>
-      <li>Support accountability</li>
-    </ul>
-    <p class="mb-2">Technology is used only after the structure is clear.</p>
-    <p class="mb-2"><strong>What this includes:</strong></p>
-    <ul class="mb-3">
-      <li>Simple shared systems for information</li>
-      <li>Automation of repetitive tasks</li>
-      <li>Clean, consistent data</li>
-    </ul>
-    <p class="mb-0"><strong>Outcome:</strong> The system carries the load — not your best people.</p>
-  </section>
-
-  <!-- How We Work -->
-  <section class="container mt-5">
-    <h2 class="section-title">How working with Vosh looks in practice</h2>
-    <div class="row g-4">
-      <div class="col-12 col-lg-3">
-        <div class="card p-4 h-100">
-          <span class="eyebrow">Step 1</span>
-          <h5 class="mt-1">Diagnose reality</h5>
-          <p class="mb-0">Understand how the company actually operates today.</p>
-        </div>
-      </div>
-      <div class="col-12 col-lg-3">
-        <div class="card p-4 h-100">
-          <span class="eyebrow">Step 2</span>
-          <h5 class="mt-1">Design structure</h5>
-          <p class="mb-0">Define rules, ownership, and priorities.</p>
-        </div>
-      </div>
-      <div class="col-12 col-lg-3">
-        <div class="card p-4 h-100">
-          <span class="eyebrow">Step 3</span>
-          <h5 class="mt-1">Build support systems</h5>
-          <p class="mb-0">Create simple tools and visibility to support the structure.</p>
-        </div>
-      </div>
-      <div class="col-12 col-lg-3">
-        <div class="card p-4 h-100">
-          <span class="eyebrow">Step 4</span>
-          <h5 class="mt-1">Create rhythm</h5>
-          <p class="mb-0">Install regular reviews so the system stays alive.</p>
-        </div>
+  <!-- Framing -->
+  <section class="services-section">
+    <div class="container">
+      <div class="editorial-block">
+        <p class="editorial-lead">Most industrial companies don’t lack effort.<br>They lack structure.</p>
+        <p class="editorial-body">Vosh helps companies move from reactive execution to calm, repeatable operations — without losing their practical, hands-on nature.</p>
       </div>
     </div>
-    <p class="mt-3 mb-0"><strong>Anchor:</strong> This is not a one-time project. It is a way of running the business better.</p>
   </section>
 
-  <!-- FAQs -->
-  <section class="container mt-5">
-    <h2 class="section-title">What Vosh is — and what it is not</h2>
-    <div class="row g-4">
-      <div class="col-12 col-lg-6">
-        <div class="card p-4 h-100">
-          <h5>Vosh is</h5>
-          <ul class="mb-0">
-            <li>A partner in building operating clarity</li>
-            <li>Focused on real execution, not theory</li>
-            <li>Grounded in industrial reality</li>
-          </ul>
-        </div>
+  <!-- Services Overview -->
+  <section class="services-section section-alt">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Services overview</p>
+        <h2 class="section-title mb-4">Four areas where structure creates momentum</h2>
       </div>
-      <div class="col-12 col-lg-6">
-        <div class="card p-4 h-100">
-          <h5>Vosh is not</h5>
-          <ul class="mb-0">
-            <li>A software vendor</li>
-            <li>A generic consultant</li>
-            <li>A quick fix</li>
-          </ul>
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="services-card">
+            <h3>Operating Clarity</h3>
+            <p>Define how work actually flows so people stop guessing.</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="services-card">
+            <h3>Commercial Structure</h3>
+            <p>Make selling reliable instead of heroic.</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="services-card">
+            <h3>Leadership Visibility</h3>
+            <p>See what matters without chasing information.</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="services-card">
+            <h3>Supportive Systems</h3>
+            <p>Let systems carry the load, not people.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Call to Action -->
-  <section class="container mt-5">
-    <h2 class="section-title">If your company is growing but feels harder to run every year, Vosh can help.</h2>
-    <div class="d-flex gap-2 flex-wrap">
-      <a class="btn btn-primary" href="mailto:info@jvosh.com">Talk with Vosh</a>
-      <a class="btn btn-outline-dark" href="tel:+19153148807">Call</a>
-      <a class="btn btn-outline-dark" target="_blank" rel="noopener" href="https://www.linkedin.com/in/hector-santiago-ortiz-vivo">LinkedIn</a>
+  <!-- Deep Dive: Operating Clarity -->
+  <section class="services-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6">
+          <div class="deep-dive-text">
+            <h2 class="section-title">Bring clarity to how the business runs</h2>
+            <p>Most companies operate on habit and urgency.</p>
+            <p>Vosh helps define how work moves, who owns what, and where decisions happen — so execution stops depending on memory.</p>
+            <div class="outcome-block">
+              <p class="mb-0">People know what to do.<br>Work becomes predictable.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="deep-dive-space"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Dive: Commercial Structure -->
+  <section class="services-section section-alt">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6 order-lg-2">
+          <div class="deep-dive-text">
+            <h2 class="section-title">Make selling reliable, not heroic</h2>
+            <p>Sales should not depend on individual discipline alone.</p>
+            <p>Vosh creates structure so opportunities, follow-ups, and commitments are visible and aligned with reality.</p>
+            <div class="outcome-block">
+              <p class="mb-0">Sales becomes a system, not a personality.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 order-lg-1">
+          <div class="deep-dive-space"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Dive: Leadership Visibility -->
+  <section class="services-section">
+    <div class="container">
+      <div class="deep-dive-centered">
+        <h2 class="section-title">See the business without chasing updates</h2>
+        <p>Leaders need perspective, not more reports.</p>
+        <p>Vosh defines the few numbers that matter and makes them visible — so decisions are calm and deliberate.</p>
+        <div class="outcome-block centered">
+          <p class="mb-0">Less noise.<br>Better decisions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Dive: Supportive Systems -->
+  <section class="services-section section-alt">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6">
+          <div class="deep-dive-text">
+            <h2 class="section-title">Use systems to support people — not replace them</h2>
+            <p>Technology is only useful when structure is clear.</p>
+            <p>Vosh introduces systems only after roles, rules, and priorities are defined.</p>
+            <div class="outcome-block">
+              <p class="mb-0">The system carries the load.<br>Your best people focus on what matters.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="deep-dive-space"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">How it works</p>
+        <h2 class="section-title">A simple, repeatable cadence</h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <span class="step-number">01</span>
+          <h3>Diagnose reality</h3>
+        </div>
+        <div class="process-step">
+          <span class="step-number">02</span>
+          <h3>Design structure</h3>
+        </div>
+        <div class="process-step">
+          <span class="step-number">03</span>
+          <h3>Build support</h3>
+        </div>
+        <div class="process-step">
+          <span class="step-number">04</span>
+          <h3>Create rhythm</h3>
+        </div>
+      </div>
+      <p class="anchor-line">This is not a one-time project.<br>It’s a better way to run the business.</p>
+    </div>
+  </section>
+
+  <!-- Contrast -->
+  <section class="services-section section-alt">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Clarity</p>
+        <h2 class="section-title">What Vosh is — and what it is not</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="contrast-card">
+            <h3>Vosh is</h3>
+            <ul>
+              <li>Focused on execution</li>
+              <li>Grounded in real operations</li>
+              <li>Built for industrial reality</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="contrast-card">
+            <h3>Vosh is not</h3>
+            <ul>
+              <li>A software vendor</li>
+              <li>A generic consultant</li>
+              <li>A quick fix</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="services-cta">
+    <div class="container">
+      <div class="cta-inner">
+        <h2 class="section-title">If your business is growing but feels harder to run every year, Vosh can help.</h2>
+        <a class="btn btn-primary" href="mailto:info@jvosh.com">Schedule a conversation</a>
+      </div>
     </div>
   </section>
 
