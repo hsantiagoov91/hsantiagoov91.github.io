@@ -22,14 +22,6 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://your-domain.github.io/about.html" />
 
-  <!-- Styles -->
-  <style>
-    .title { font-family:'Red Hat Display',sans-serif; color:var(--ink); }
-    .lead { color:var(--muted); }
-    .link-brand { color:var(--brand); text-decoration:none; }
-    .link-brand:hover { text-decoration:underline; }
-  </style>
-
   <!-- Schema (Organization) -->
   <script type="application/ld+json">
   {
@@ -44,7 +36,7 @@
   }
   </script>
 </head>
-<body>
+<body class="about-page">
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-light border-bottom" aria-label="Primary">
@@ -67,120 +59,194 @@
     </div>
   </nav>
 
-  <!-- Header -->
-  <header class="container text-center mt-5">
-    <p class="eyebrow mb-1">About Vosh</p>
-    <h1 class="title mb-3">Built from inside real industrial businesses</h1>
-    <p class="lead">Structure, not theory.<br>Work that holds under pressure.</p>
-  </header>
+  <!-- Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-12 col-lg-6">
+          <p class="eyebrow mb-2">About Vosh</p>
+          <h1 class="about-hero-title mb-3">Industrial clarity, engineered like a classic Mustang.</h1>
+          <p class="about-hero-lead">
+            Inspired by the Mustang ’64+ and industrial architecture: clean lines, honest materials, and power that feels effortless.
+            We build systems that look simple, feel solid, and perform every day.
+          </p>
+          <div class="about-hero-actions">
+            <a class="btn btn-primary" href="services.html">See the Services</a>
+            <a class="btn btn-outline-dark" href="contact.html">Talk with Vosh</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="about-hero-panel">
+            <div class="about-hero-panel-top">
+              <p class="about-panel-label">Design language</p>
+              <h2 class="section-title mb-3">Strength + simplicity.</h2>
+              <p class="mb-0">
+                Think factory steel, chrome edges, and a cockpit that never overwhelms. Every detail has a purpose.
+              </p>
+            </div>
+            <div class="about-hero-panel-grid">
+              <div class="about-pill">Balanced power</div>
+              <div class="about-pill">Industrial rhythm</div>
+              <div class="about-pill">Clear lines</div>
+              <div class="about-pill">Durable systems</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Framing -->
-  <section class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-8">
-        <h2 class="section-title">Why Vosh exists</h2>
-        <p>Vosh was created to solve a problem that appears again and again in industrial companies.</p>
-        <p>The company works. Customers are real. People are committed.</p>
-        <p>Yet the business becomes harder to run every year.</p>
-        <p>More decisions. More follow‑ups. More dependence on a few individuals.</p>
-        <p class="mb-0">Vosh exists to replace constant intervention with structure that holds.</p>
+  <!-- Why -->
+  <section class="about-section section-pad">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-lg-6">
+          <h2 class="section-title">Why Vosh exists</h2>
+          <p class="lead mb-3">Industrial businesses keep moving. The problem is the systems behind them.</p>
+          <p>More decisions. More follow-ups. More dependence on a few key people.</p>
+          <p class="mb-0">Vosh replaces constant intervention with architecture that holds under pressure.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="about-card-stack">
+            <div class="about-card">
+              <p class="about-card-title">Structure before speed</p>
+              <p class="mb-0">Build the frame, then the flow. Growth should feel lighter, not heavier.</p>
+            </div>
+            <div class="about-card">
+              <p class="about-card-title">Clarity before complexity</p>
+              <p class="mb-0">Dashboards and meetings only work when the base system is clean.</p>
+            </div>
+            <div class="about-card">
+              <p class="about-card-title">People before tools</p>
+              <p class="mb-0">The best operations keep teams steady, even when the market is not.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Origin -->
-  <section class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-8">
-        <h2 class="section-title">Where the work comes from</h2>
-        <p>The work behind Vosh was built inside operating companies.</p>
-        <p>In warehouses. In quoting desks. In cross‑border operations. Under delivery pressure and real customer consequences.</p>
-        <p>This perspective shapes everything Vosh does: no abstract frameworks, no theoretical models, no software‑first thinking.</p>
-        <p class="mb-0">Only what survives contact with reality.</p>
+  <section class="about-section section-pad section-alt">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-12 col-lg-5">
+          <p class="eyebrow mb-2">Origin</p>
+          <h2 class="section-title">Built inside real operations.</h2>
+          <p class="mb-0">
+            The work comes from warehouses, quoting desks, and cross-border operations. No abstract frameworks. Only what
+            survives contact with reality.
+          </p>
+        </div>
+        <div class="col-12 col-lg-7">
+          <div class="about-grid">
+            <div class="about-grid-card">
+              <h3 class="about-grid-title">Industrial architecture</h3>
+              <p>Clear spans, visible load paths, and simple circulation. Every part supports the whole.</p>
+            </div>
+            <div class="about-grid-card">
+              <h3 class="about-grid-title">Mustang discipline</h3>
+              <p>Iconic lines, purposeful details, and performance you can feel in your hands.</p>
+            </div>
+            <div class="about-grid-card">
+              <h3 class="about-grid-title">Operational realism</h3>
+              <p>Built under delivery pressure, real customer consequences, and tight margins.</p>
+            </div>
+            <div class="about-grid-card">
+              <h3 class="about-grid-title">Quiet confidence</h3>
+              <p>No noise. No waste. A system that keeps working long after the consultant leaves.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Philosophy -->
-  <section class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-8">
-        <h2 class="section-title">How Vosh thinks</h2>
-        <p>Vosh believes:</p>
-        <p>Businesses should not depend on memory.</p>
-        <p>People should not carry the system on their backs.</p>
-        <p>Technology should follow structure, not lead it.</p>
-        <p>Growth should reduce chaos, not multiply it.</p>
-        <p class="mt-4">Order is not rigidity.</p>
-        <p class="mb-0">It is what allows freedom to last.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Person -->
-  <section class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-8">
-        <h2 class="section-title">The person behind Vosh</h2>
-        <p>
-          Vosh is led by an industrial operator with more than a decade of hands‑on experience building and scaling operations
-          across the U.S., Mexico, and Europe.
-        </p>
-        <p>
-          The work spans commercial structure, operations, and leadership visibility — always with the same goal:
-          make the business easier to run as it grows.
-        </p>
-        <p class="mb-0">Not louder. Not flashier. Just more solid.</p>
+  <section class="about-section section-pad">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-lg-4">
+          <h2 class="section-title">How Vosh thinks</h2>
+          <p class="mb-0">
+            Order is not rigidity. It is what allows freedom to last.
+          </p>
+        </div>
+        <div class="col-12 col-lg-8">
+          <div class="about-statement">
+            <p>Businesses should not depend on memory.</p>
+            <p>People should not carry the system on their backs.</p>
+            <p>Technology should follow structure, not lead it.</p>
+            <p class="mb-0">Growth should reduce chaos, not multiply it.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Practice -->
-  <section class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-8">
-        <h2 class="section-title">How this shows up in practice</h2>
-        <p>In practice, this means:</p>
-        <p>Clear rules before tools.</p>
-        <p>Visibility before reports.</p>
-        <p>Rhythm before speed.</p>
-        <p class="mb-0">Every engagement is built to last beyond the individual.</p>
+  <section class="about-section section-pad section-alt">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-lg-6">
+          <h2 class="section-title">How this shows up in practice</h2>
+          <p>Clear rules before tools. Visibility before reports. Rhythm before speed.</p>
+          <p class="mb-0">Every engagement is built to last beyond the individual.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="about-lines">
+            <div>
+              <span class="about-line-label">Line 01</span>
+              <p class="mb-0">Stabilize the flow before you accelerate it.</p>
+            </div>
+            <div>
+              <span class="about-line-label">Line 02</span>
+              <p class="mb-0">Protect the core team with clear roles and cadence.</p>
+            </div>
+            <div>
+              <span class="about-line-label">Line 03</span>
+              <p class="mb-0">Measure what keeps the system honest.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Boundaries -->
-  <section class="container mt-5">
-    <div class="row g-4">
-      <div class="col-12 col-lg-6">
-        <div class="card p-4 h-100">
-          <h2 class="section-title mb-3">Vosh is</h2>
-          <p class="mb-1">An operating partner</p>
-          <p class="mb-1">Grounded in industrial reality</p>
-          <p class="mb-0">Focused on execution</p>
+  <section class="about-section section-pad">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="about-card about-card-solid">
+            <h2 class="section-title mb-3">Vosh is</h2>
+            <p class="mb-1">An operating partner</p>
+            <p class="mb-1">Grounded in industrial reality</p>
+            <p class="mb-0">Focused on execution</p>
+          </div>
         </div>
-      </div>
-      <div class="col-12 col-lg-6">
-        <div class="card p-4 h-100">
-          <h2 class="section-title mb-3">Vosh is not</h2>
-          <p class="mb-1">A software vendor</p>
-          <p class="mb-1">A generic consultant</p>
-          <p class="mb-0">A quick fix</p>
+        <div class="col-12 col-lg-6">
+          <div class="about-card about-card-solid">
+            <h2 class="section-title mb-3">Vosh is not</h2>
+            <p class="mb-1">A software vendor</p>
+            <p class="mb-1">A generic consultant</p>
+            <p class="mb-0">A quick fix</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Closing -->
-  <section class="container mt-5 pb-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-8">
-        <h2 class="section-title">For the owner</h2>
-        <p>Vosh is for companies that want to grow without losing their footing.</p>
-        <p>Nothing trendy. Nothing disposable.</p>
-        <p class="mb-0">Just work designed to hold up — year after year.</p>
-        <div class="mt-3">
-          <a class="link-brand" href="services.html">Continue to Services</a>
+  <section class="about-section section-pad pb-5">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-12 col-lg-8">
+          <p class="eyebrow mb-2">For the owner</p>
+          <h2 class="section-title">Strong, simple, aligned.</h2>
+          <p class="lead">A system that feels as good to run as it looks on paper.</p>
+          <p class="mb-4">Nothing trendy. Nothing disposable. Just work designed to hold up — year after year.</p>
+          <a class="btn btn-dark" href="services.html">Continue to Services</a>
         </div>
       </div>
     </div>
