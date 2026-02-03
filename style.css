@@ -1,6 +1,6 @@
 :root {
-  --brand: #f70000;
-  --brand-dark: #ad1403;
+  --brand: #111111;
+  --brand-dark: #000000;
   --ink: #000000;
   --ink-soft: #1f1f1f;
   --muted: #3a3a3a;
@@ -32,7 +32,7 @@ html {
 }
 
 .section-pad {
-  padding: 72px 0;
+  padding: 96px 0;
   background: #ffffff;
 }
 
@@ -42,8 +42,8 @@ html {
 
 h2,
 .section-title {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 2.2rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.4rem;
   font-weight: 600;
   color: var(--ink);
   margin-bottom: 0.85rem;
@@ -60,8 +60,8 @@ h3 {
 
 .section-subtitle {
   color: var(--muted);
-  max-width: 820px;
-  font-size: 1rem;
+  max-width: 720px;
+  font-size: 1.05rem;
 }
 
 .eyebrow {
@@ -101,15 +101,15 @@ h3 {
 
 .btn-primary {
   background-color: var(--brand);
-  border: none;
-  border-radius: 999px;
-  padding: 0.7rem 1.6rem;
-  font-weight: 700;
+  border: 1px solid var(--brand);
+  border-radius: 6px;
+  padding: 0.65rem 1.4rem;
+  font-weight: 600;
   color: #ffffff;
 }
 
 .btn-primary:hover {
-  background-color: #d70000;
+  background-color: #000000;
   color: #ffffff;
 }
 
@@ -177,31 +177,35 @@ h3 {
 .hero {
   background: #ffffff;
   color: var(--ink);
-  padding: 90px 0 70px;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 100px;
   border-bottom: 1px solid var(--line);
 }
 
 .hero-inner {
-  max-width: 820px;
-  margin: 0 auto 32px;
-  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
 }
 
 .hero-title {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: clamp(2.4rem, 4vw, 3.6rem);
-  line-height: 1.15;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
 }
 
 .hero-subtitle {
   color: var(--muted);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   max-width: 720px;
+  margin-bottom: 2.5rem;
 }
 
-.logo-hero {
-  max-height: 88px;
-  margin-bottom: 16px;
+.hero-cta {
+  margin-top: 0.5rem;
 }
 
 .hero-card {
@@ -237,30 +241,22 @@ h3 {
   padding: 24px;
 }
 
-.hero-animate {
-  transform: translateY(16px);
-  animation: riseUp 700ms ease forwards;
+.narrow {
+  max-width: 720px;
 }
 
-.hero-animate.delay-1 {
-  animation-delay: 120ms;
+.section-rule {
+  border-top: 1px solid var(--line);
 }
 
-.hero-animate.delay-2 {
-  animation-delay: 240ms;
-}
-
-.hero-animate.delay-3 {
-  animation-delay: 360ms;
-}
-
-@keyframes riseUp {
-  from {
-    transform: translateY(16px);
-  }
-  to {
-    transform: translateY(0);
-  }
+.outcome-stack {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.01em;
 }
 
 .card-media {
@@ -506,11 +502,11 @@ h3 {
 
 @media (max-width: 991px) {
   .section-pad {
-    padding: 56px 0;
+    padding: 72px 0;
   }
 
   .hero {
-    padding: 72px 0 60px;
+    padding: 96px 0 80px;
   }
 
   .card-panel {
@@ -528,11 +524,11 @@ h3 {
 
 @media (max-width: 575px) {
   .section-pad {
-    padding: 48px 0;
+    padding: 64px 0;
   }
 
   .hero-title {
-    font-size: clamp(2.1rem, 7vw, 2.8rem);
+    font-size: clamp(2.4rem, 8vw, 3.1rem);
   }
 
   .row.g-4 {
