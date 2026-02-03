@@ -22,7 +22,7 @@
   <meta property="og:url" content="https://your-domain.github.io/about.html" />
 
   <style>
-    :root { --brand:#f70000; --brand-dark:#ad1403; --ink:#000000; --muted:#4b4b4b; --line:#e7e7e7; }
+    :root { --brand:#f70000; --brand-dark:#ad1403; --accent-yellow:#d6de23; --accent-blue:#00adee; --ink:#000000; --muted:#4b4b4b; --line:#e6e6e6; }
     body { font-family:'Red Hat Text',sans-serif; color:var(--ink); background:#ffffff; }
     .section-title { font-family:'Red Hat Display',sans-serif; font-size:1.9rem; color:var(--ink); margin-top:40px; }
     .lead { color:#1f1f1f; }
@@ -30,14 +30,14 @@
     .container p { font-size:1.06rem; }
     .badge-brand { background:var(--brand); }
     .muted { color:var(--muted); }
-    .card { border:1px solid var(--line); border-radius:14px; box-shadow:0 12px 24px rgba(15,23,42,0.08); }
+    .card { border:1px solid var(--line); border-radius:14px; box-shadow:0 12px 24px rgba(0,0,0,0.08); }
     a.text-brand { color:var(--brand); text-decoration:none; }
     a.text-brand:hover { text-decoration:underline; }
     .icon { width:18px; height:18px; vertical-align:-3px; }
     .btn-primary { background:var(--brand); border-color:var(--brand); color:#ffffff; border-radius:999px; font-weight:700; }
-    .btn-primary:hover { background:#d70000; border-color:#d70000; color:#ffffff; }
+    .btn-primary:hover { background:var(--brand-dark); border-color:var(--brand-dark); color:#ffffff; }
     .btn-dark { background:var(--brand); border-color:var(--brand); color:#ffffff; border-radius:999px; font-weight:700; }
-    .btn-dark:hover { background:#d70000; border-color:#d70000; color:#ffffff; }
+    .btn-dark:hover { background:var(--brand-dark); border-color:var(--brand-dark); color:#ffffff; }
     .btn-outline-dark { border-color:var(--brand); color:var(--brand); border-radius:999px; font-weight:600; background:#ffffff; }
     .btn-outline-dark:hover { background:var(--brand); color:#ffffff; border-color:var(--brand); }
   </style>

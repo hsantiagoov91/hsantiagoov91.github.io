@@ -18,13 +18,14 @@
   <meta property="og:url" content="https://your-domain.github.io/brm.html" />
 
   <style>
-    :root { --brand:#f70000; --brand-dark:#ad1403; --ink:#000000; --muted:#4b4b4b; --line:#e7e7e7; --bg-soft:#f9f9fb; }
+    :root { --brand:#f70000; --brand-dark:#ad1403; --accent-yellow:#d6de23; --accent-blue:#00adee; --ink:#000000; --muted:#4b4b4b; --line:#e6e6e6; --bg-soft:#f7f7f7; }
     body { font-family:'Red Hat Text',sans-serif; color:var(--ink); background:#ffffff; }
     .navbar-brand img { max-height:34px; }
-    .hero { background:#ffffff; color:var(--ink); padding:96px 0 88px; text-align:center; border-bottom:1px solid var(--line); }
+    .hero { background:linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%); color:var(--ink); padding:96px 0 88px; text-align:center; border-bottom:1px solid var(--line); }
     .hero .title { font-family:'Red Hat Display',sans-serif; font-size:2.8rem; margin-bottom:1.2rem; color:var(--ink); }
     .hero .lead { max-width:760px; margin:0 auto 1.6rem; font-size:1.1rem; color:var(--muted); }
     .btn-primary { background-color:var(--brand); border:none; }
+    .btn-primary:hover { background:var(--brand-dark); }
     .btn-outline-light { border-color:var(--brand); color:var(--brand); background:#ffffff; }
     .btn-outline-light:hover { background:var(--brand); color:#ffffff; }
     .btn-outline-dark { border-color:var(--brand); color:var(--brand); background:#ffffff; }
@@ -38,11 +39,11 @@
     .card h3 { font-family:'Red Hat Display',sans-serif; font-size:1.3rem; color:var(--ink); }
     .card p { color:var(--muted); }
     .pillars .card { background:#fff; }
-    .flow-step { position:relative; padding:1.6rem; border-radius:16px; background:#fff; box-shadow:0 12px 30px rgba(15,23,42,0.08); border:1px solid var(--line); }
+    .flow-step { position:relative; padding:1.6rem; border-radius:16px; background:#fff; box-shadow:0 12px 30px rgba(0,0,0,0.08); border:1px solid var(--line); }
     .flow-step:not(:last-child)::after { content:""; position:absolute; left:50%; bottom:-36px; transform:translateX(-50%); width:2px; height:36px; background:var(--line); }
     .flow-num { display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:999px; border:1px solid var(--brand); color:var(--brand); font-weight:700; margin-bottom:1rem; }
     .bg-soft { background:var(--bg-soft); }
-    .quote { font-family:'Red Hat Display',sans-serif; font-size:1.6rem; color:#111111; }
+    .quote { font-family:'Red Hat Display',sans-serif; font-size:1.6rem; color:var(--ink); }
     .icon-bullet { font-size:1.5rem; line-height:1; margin-right:.6rem; }
     .link-inverse { color:var(--ink); text-decoration:none; }
     .link-inverse:hover { text-decoration:underline; }
