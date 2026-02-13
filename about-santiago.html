@@ -43,6 +43,19 @@
 </head>
 <body>
 
+  <!-- Intro -->
+  <section class="container mt-5">
+    <div class="card p-4 p-md-5">
+      <h1 class="section-title mt-0 mb-3">Hi, I’m Santiago Ortiz Vivó.</h1>
+      <p class="mb-3">I’m married and a father of two. I design and build operations and commercial systems across Europe, Mexico, and the U.S. for industrial companies. From Houston, I lead the U.S. expansion of a Mexican bolt manufacturer, and I help business owners see in real time what is happening with their teams and customers using AI, Business Intelligence, and my own platform: BRM (Business Results Maximization).</p>
+      <p class="mb-0">I studied Innovation and Design Engineering at UP, completed the Master’s in People Management (MDPO) at UNAV, and earned an MBA at Anáhuac. I’m especially interested in the intersection of family, business, anthropology, and AI. I’m also open to connecting on LinkedIn: <a class="text-brand" href="https://linkedin.com/in/santiago-ortiz-vivo" target="_blank" rel="noopener">linkedin.com/in/santiago-ortiz-vivo</a>.</p>
+      <div class="mt-4">
+        <button id="see-more-toggle" class="btn btn-primary" type="button" aria-controls="expanded-content" aria-expanded="false">See more</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="expanded-content" class="d-none">
   <!-- Hero -->
   <header class="container mt-5">
     <h1 class="section-title mb-3">I build industrial growth platforms in North America.</h1>
@@ -141,6 +154,24 @@
     </p>
   </section>
 
+
+
+  <!-- Personal Profile -->
+  <section id="profile" class="container mt-5">
+    <h2 class="section-title">Profile</h2>
+    <p>
+      I am Santiago Ortiz Vivo. I studied Innovation and Design Engineering (UP), earned a Master’s in People Management (UNAV), and completed an MBA (Anáhuac), while staying in continuous development. I work as an industrial growth leader, building operations and commercial systems across Europe, Mexico, and the U.S. in the industrial sector. From Houston, I currently lead the U.S. expansion of a Mexican bolt manufacturer. I am interested in this course to deepen my understanding of the anthropology of executive action, design AI-enabled organizations that elevate the person, and translate those learnings into practical leadership decisions for business, family enterprise, and personal life. I live in Houston, I am married, and I am a father of two children. I am also open to connecting on LinkedIn: <a class="text-brand" href="https://linkedin.com/in/santiago-ortiz-vivo" target="_blank" rel="noopener">linkedin.com/in/santiago-ortiz-vivo</a>.
+    </p>
+  </section>
+
+  <!-- Values -->
+  <section id="values" class="container mt-5">
+    <h2 class="section-title">Values</h2>
+    <p class="mb-0">I build with a long-term view: service, honesty, and shared ownership.</p>
+  </section>
+
+  </section>
+
   <!-- Values -->
   <section id="values" class="container mt-5">
     <h2 class="section-title">Values</h2>
@@ -161,6 +192,22 @@
       <a class="btn btn-outline-dark" href="https://www.linkedin.com/in/santiago-ortiz-vivo/" target="_blank" rel="noopener" aria-label="Visit Santiago's LinkedIn profile">LinkedIn</a>
     </div>
   </section>
+
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('see-more-toggle');
+    const expandedContent = document.getElementById('expanded-content');
+
+    if (toggleBtn && expandedContent) {
+      toggleBtn.addEventListener('click', () => {
+        const isHidden = expandedContent.classList.contains('d-none');
+        expandedContent.classList.toggle('d-none');
+        toggleBtn.setAttribute('aria-expanded', String(isHidden));
+        toggleBtn.textContent = isHidden ? 'Hide details' : 'See more';
+      });
+    }
+  </script>
 
   <!-- Footer -->
   <footer class="footer">
