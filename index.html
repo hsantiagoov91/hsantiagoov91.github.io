@@ -49,13 +49,12 @@
     .site-header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06);z-index:20}
     .header-row{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
     .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.08em;font-size:1.14rem}
-    .brand-mark{position:relative;width:28px;height:22px;border-radius:7px 14px 7px 14px;background:linear-gradient(135deg,var(--red) 0 48%,#ff3024 48% 61%,var(--red-dark) 61%);transform:skewX(-10deg)}
-    .brand-mark:after{content:"";position:absolute;inset:5px 7px;background:white;clip-path:polygon(46% 0,100% 0,57% 100%,0 100%)}
     .brand small{font-size:.5rem;color:var(--red);letter-spacing:.1em;display:block;margin-top:-2px}
     .brand-logo{display:inline-flex;align-items:center}
+    .brand-icon{display:block;width:38px;height:38px;object-fit:contain}
     .brand-copy{line-height:.9}
     .footer-logo{color:#fff}
-    .footer-logo .brand-mark:after{background:#161719}
+    .footer-logo .brand-icon{width:42px;height:42px}
 
     nav{display:flex;align-items:center;gap:26px;font-weight:700;font-size:.91rem}
     nav a:not(.btn){color:#4d4f52}
@@ -144,7 +143,7 @@
   <header class="site-header">
     <div class="container header-row">
       <a class="brand brand-logo" href="#top" aria-label="Vosh Business Solutions home">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <img class="brand-icon" src="assets/favicon.ico" alt="" aria-hidden="true">
         <span class="brand-copy">VOSH<small>BUSINESS SOLUTIONS</small></span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
@@ -266,7 +265,7 @@
   <footer>
     <div class="container">
       <div class="footer-grid">
-        <div><div class="brand brand-logo footer-logo"><span class="brand-mark" aria-hidden="true"></span><span class="brand-copy">VOSH<small>BUSINESS SOLUTIONS</small></span></div><p style="margin-top:16px;max-width:330px">Clear operating systems, disciplined execution, and sustainable growth for industrial businesses.</p></div>
+        <div><div class="brand brand-logo footer-logo"><img class="brand-icon" src="assets/favicon.ico" alt="" aria-hidden="true"><span class="brand-copy">VOSH<small>BUSINESS SOLUTIONS</small></span></div><p style="margin-top:16px;max-width:330px">Clear operating systems, disciplined execution, and sustainable growth for industrial businesses.</p></div>
         <div><h4>Explore</h4><a href="#why">Why Vosh</a><a href="#systems">What we build</a><a href="#method">How it works</a></div>
         <div><h4>Contact</h4><a href="mailto:info@jvosh.com">info@jvosh.com</a><a href="tel:+19153148807">+1 915 314 8807</a><p>U.S. • Mexico • Cross-border</p></div>
       </div>
