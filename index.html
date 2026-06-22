@@ -1,208 +1,297 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light" />
-  <meta name="supported-color-schemes" content="light" />
-  <title>Vosh Business Solutions</title>
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;600;700;800;900&family=Red+Hat+Text:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="Vosh helps industrial businesses run with clear operating systems, disciplined execution, and visible performance." />
+  <title>Vosh Business Solutions | Industrial Operating Systems</title>
+  <meta property="og:title" content="Vosh Business Solutions | Industrial Operating Systems" />
+  <meta property="og:description" content="Less chaos. Clear execution. Calm growth." />
+  <meta property="og:image" content="assets/vosh-logo.png" />
+  <style>
+    :root{
+      --ink:#000000;
+      --muted:#63656a;
+      --line:#e8e8e8;
+      --paper:#ffffff;
+      --soft:#f7f7f6;
+      --soft2:#f1f2f2;
+      --red:#F70000;
+      --red-dark:#AD1403;
+      --steel:#34363a;
+      --max:1180px;
+      --radius:18px;
+      --shadow:0 18px 46px rgba(24,24,24,.09);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Red Hat Text",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:auto;padding:0 28px}
+    .eyebrow{display:flex;align-items:center;gap:10px;font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;font-weight:800;color:var(--red)}
+    .eyebrow:before{content:"";width:28px;height:2px;background:var(--red)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid transparent;border-radius:9px;padding:14px 18px;font-weight:800;font-size:.94rem;transition:.2s ease;cursor:pointer}
+    .btn-primary{background:var(--red);color:white;box-shadow:0 9px 18px rgba(196,22,11,.2)}
+    .btn-primary:hover{background:var(--red-dark);transform:translateY(-1px)}
+    .btn-secondary{border-color:#bfc0c1;background:white}
+    .btn-secondary:hover{border-color:var(--ink)}
+    .section{padding:100px 0}
+    .section-soft{background:var(--soft)}
+    h1,h2,h3{font-family:"Red Hat Display",ui-sans-serif,system-ui,sans-serif} h1,h2,h3,p{margin-top:0}
+    h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;letter-spacing:-.045em;margin-bottom:20px}
+    .lead{color:var(--muted);font-size:1.12rem;max-width:640px}
+    .topbar{background:#202124;color:#e9e9e9;font-size:.78rem}
+    .topbar .container{padding-top:8px;padding-bottom:8px;display:flex;justify-content:space-between;gap:12px}
+    .site-header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06);z-index:20}
+    .header-row{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.08em;font-size:1.14rem}
+    .brand-mark{position:relative;width:28px;height:22px;border-radius:7px 14px 7px 14px;background:linear-gradient(135deg,var(--red) 0 48%,#ff3024 48% 61%,var(--red-dark) 61%);transform:skewX(-10deg)}
+    .brand-mark:after{content:"";position:absolute;inset:5px 7px;background:white;clip-path:polygon(46% 0,100% 0,57% 100%,0 100%)}
+    .brand small{font-size:.5rem;color:var(--red);letter-spacing:.1em;display:block;margin-top:-2px}
+    .brand-logo{display:inline-flex;align-items:center}
+    .brand-copy{line-height:.9}
+    .footer-logo{color:#fff}
+    .footer-logo .brand-mark:after{background:#161719}
 
-  <!-- Favicon & Fonts -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600;700&family=Red+Hat+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+    nav{display:flex;align-items:center;gap:26px;font-weight:700;font-size:.91rem}
+    nav a:not(.btn){color:#4d4f52}
+    nav a:not(.btn):hover{color:var(--red)}
+    .nav-toggle{display:none;background:none;border:0;font-size:1.3rem;cursor:pointer;color:var(--ink)}
+    .hero{overflow:hidden;position:relative;background:linear-gradient(113deg,#fff 0%,#f8f8f8 51%,#e1e2e2 100%);padding:104px 0 84px}
+    .hero:before{content:"";position:absolute;right:-12%;top:-40%;width:62%;height:136%;background:radial-gradient(circle at 50% 50%,rgba(255,255,255,.78),transparent 58%),linear-gradient(125deg,transparent 30%,rgba(255,255,255,.42) 30% 32%,transparent 32% 48%,rgba(255,255,255,.45) 48% 50%,transparent 50%);transform:rotate(6deg)}
+    .hero:after{content:"";position:absolute;bottom:-85px;right:-70px;width:520px;height:300px;background:linear-gradient(135deg,var(--steel),#222);clip-path:polygon(32% 100%,60% 0,100% 0,100% 100%);opacity:.98}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.13fr) minmax(330px,.87fr);gap:68px;align-items:center}
+    .hero h1{font-size:clamp(3.2rem,6vw,5.65rem);letter-spacing:-.075em;line-height:.94;margin:18px 0 22px;max-width:700px}
+    .hero h1 .accent{color:var(--red)}
+    .hero-copy{font-size:1.14rem;color:#4d4f52;max-width:565px;margin-bottom:30px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .proof{display:flex;gap:22px;margin-top:36px;align-items:center;color:#555}
+    .proof strong{display:block;color:var(--ink);font-size:1.02rem}
+    .proof span{display:block;font-size:.8rem}
+    .proof-divider{width:1px;height:34px;background:#d0d0d0}
+    .operating-card{background:#242528;color:white;border-radius:16px;padding:26px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .operating-card:after{content:"";position:absolute;right:-20px;top:-45px;width:145px;height:145px;border:1px solid rgba(255,255,255,.18);border-radius:50%;box-shadow:0 0 0 28px rgba(255,255,255,.04),0 0 0 57px rgba(255,255,255,.03)}
+    .card-kicker{font-size:.73rem;letter-spacing:.12em;text-transform:uppercase;color:#f5aaa4;font-weight:900}
+    .operating-card h3{font-size:1.7rem;line-height:1.05;max-width:290px;margin:10px 0 24px}
+    .signal{border-top:1px solid rgba(255,255,255,.16);padding:14px 0;display:flex;justify-content:space-between;gap:14px;font-size:.9rem}
+    .signal b{color:#fff;font-size:.82rem}
+    .signal .good{color:#ff675e}
+    .strips{position:absolute;bottom:0;left:0;width:100%;height:9px;background:linear-gradient(90deg,var(--red) 0 32%,#ff4a40 32% 54%,#a1110a 54%)}
+    .problem-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:82px;align-items:start}
+    .pain-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .pain{background:#fff;border:1px solid var(--line);padding:25px;border-radius:14px;min-height:148px}
+    .pain-number{font-weight:900;color:var(--red);font-size:.82rem;letter-spacing:.1em}
+    .pain h3{font-size:1.05rem;margin:11px 0 7px}
+    .pain p{color:var(--muted);font-size:.9rem;margin:0}
+    .outcomes{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .outcome{padding:29px 24px 28px;border-right:1px solid var(--line)}
+    .outcome:last-child{border:0}
+    .outcome .number{font-size:2.25rem;color:var(--red);font-weight:900;letter-spacing:-.07em;display:block;line-height:1}
+    .outcome h3{font-size:1rem;margin:12px 0 8px}
+    .outcome p{color:var(--muted);font-size:.88rem;margin:0}
+    .systems{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+    .system{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:28px;position:relative;overflow:hidden}
+    .system:before{content:"";position:absolute;width:58px;height:4px;background:var(--red);top:0;left:0}
+    .system-icon{font-size:1.32rem;color:var(--red);font-weight:900;margin-bottom:26px}
+    .system h3{font-size:1.22rem;margin:0 0 10px}
+    .system p{font-size:.93rem;color:var(--muted);margin:0}
+    .method-grid{display:grid;grid-template-columns:.83fr 1.17fr;gap:75px;align-items:center}
+    .process{display:grid;gap:0}
+    .step{display:grid;grid-template-columns:64px 1fr;gap:20px;border-top:1px solid var(--line);padding:23px 0}
+    .step:last-child{border-bottom:1px solid var(--line)}
+    .step-num{font-size:1.45rem;font-weight:900;color:var(--red)}
+    .step h3{font-size:1.13rem;margin:1px 0 5px}
+    .step p{font-size:.92rem;color:var(--muted);margin:0}
+    .quote{background:var(--steel);color:#fff;padding:47px;border-radius:20px;position:relative}
+    .quote:before{content:"“";font-size:7rem;color:#d8261b;line-height:.4;position:absolute;top:30px;left:37px}
+    .quote p{font-size:1.42rem;line-height:1.35;font-weight:650;position:relative;margin:24px 0 28px}
+    .quote small{color:#c5c6c8}
+    .cta{padding:88px 0;background:linear-gradient(120deg,#202124,#3c3e41);color:white;position:relative;overflow:hidden}
+    .cta:after{content:"";position:absolute;right:-50px;bottom:-100px;width:600px;height:300px;background:linear-gradient(135deg,#c4160b,#ff3227);clip-path:polygon(48% 0,100% 0,100% 100%,0 100%);opacity:.95}
+    .cta .container{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:40px}
+    .cta h2{max-width:680px;margin:14px 0 0}
+    .cta .eyebrow{color:#ff948d}.cta .eyebrow:before{background:#ff948d}
+    footer{background:#161719;color:#d7d7d8;padding:42px 0 22px}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;padding-bottom:32px}
+    footer h4{margin:0 0 12px;color:#fff;font-size:.88rem}
+    footer p,footer a{font-size:.88rem;color:#bdbec0;display:block;margin:5px 0}
+    .legal{padding-top:18px;border-top:1px solid #343538;font-size:.76rem;color:#929396;display:flex;justify-content:space-between;gap:16px}
+    @media (max-width:900px){
+      nav{display:none;position:absolute;top:78px;left:0;right:0;background:white;border-bottom:1px solid var(--line);padding:18px 28px;flex-direction:column;align-items:flex-start;gap:17px}
+      nav.open{display:flex}.nav-toggle{display:block}
+      .hero-grid,.problem-grid,.method-grid{grid-template-columns:1fr;gap:42px}
+      .hero{padding-top:72px}.operating-card{max-width:520px}
+      .outcomes{grid-template-columns:repeat(2,1fr)}.outcome:nth-child(2){border-right:0}.outcome:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .systems{grid-template-columns:1fr}
+      .cta .container{display:block}.cta .btn{margin-top:28px}
+    }
+    @media (max-width:600px){
+      .container{padding-left:20px;padding-right:20px}.topbar .container{justify-content:center}.topbar span:last-child{display:none}
+      .section{padding:72px 0}.hero h1{font-size:3.22rem}.hero{padding:65px 0}.proof{gap:13px}.pain-list{grid-template-columns:1fr}.outcomes{grid-template-columns:1fr}.outcome,.outcome:nth-child(2){border-right:0;border-bottom:1px solid var(--line)}.outcome:last-child{border-bottom:0}
+      .footer-grid{grid-template-columns:1fr}.legal{display:block}.legal span{display:block;margin:5px 0}.quote{padding:34px 28px}.hero-actions .btn{width:100%}
+    }
+  </style>
 </head>
 <body>
+  <div class="topbar">
+    <div class="container"><span>Industrial operating systems for companies ready to scale.</span><span>U.S. • Mexico • Cross-border execution</span></div>
+  </div>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-light border-bottom">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="logo-symbol.png" alt="Vosh logo">
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand brand-logo" href="#top" aria-label="Vosh Business Solutions home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-copy">VOSH<small>BUSINESS SOLUTIONS</small></span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="navMain" class="collapse navbar-collapse justify-content-end">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
+      <nav id="site-nav">
+        <a href="#why">Why Vosh</a>
+        <a href="#systems">What We Build</a>
+        <a href="#method">How It Works</a>
+        <a href="#contact" class="btn btn-primary">Start a conversation <span>→</span></a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container-content">
-      <div class="hero-inner">
-        <h1 class="hero-title">Run your industrial business without carrying it on your back.</h1>
-        <p class="hero-subtitle">
-          Less chaos.<br>
-          Clear execution. Calm growth.
-        </p>
-        <div class="hero-cta">
-          <a href="contact.html" class="btn btn-primary">See if this fits your company</a>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Industrial growth, built to hold</div>
+          <h1>Less chaos.<br><span class="accent">Clear execution.</span><br>Calm growth.</h1>
+          <p class="hero-copy">Vosh helps industrial businesses build the operating structure, commercial discipline, and management rhythm required to grow without putting every decision back on the owner.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">See if Vosh fits your business <span>→</span></a>
+            <a href="#method" class="btn btn-secondary">How it works</a>
+          </div>
+          <div class="proof">
+            <div><strong>Industrial operator-led</strong><span>Not theory-first consulting</span></div>
+            <span class="proof-divider"></span>
+            <div><strong>U.S. + Mexico perspective</strong><span>Built for cross-border reality</span></div>
+          </div>
         </div>
+        <aside class="operating-card" aria-label="Operating system illustration">
+          <div class="card-kicker">The Vosh difference</div>
+          <h3>Structure that keeps moving when you step away.</h3>
+          <div class="signal"><span>Commercial priorities</span><b class="good">VISIBLE</b></div>
+          <div class="signal"><span>Ownership and follow-through</span><b class="good">CLEAR</b></div>
+          <div class="signal"><span>Operating rhythm</span><b class="good">REPEATABLE</b></div>
+          <div class="signal"><span>Leadership attention</span><b class="good">FOCUSED</b></div>
+          <div class="strips"></div>
+        </aside>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- The Problem -->
-  <section class="section-pad">
-    <div class="container-content">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="section-title">Most industrial businesses don’t fail.</h2>
-          <div class="section-subtitle mb-0">
-            <p>They work because a few people push everything forward.</p>
-            <p class="mb-0">When those people stop, everything slows down.</p>
-          </div>
+    <section class="section" id="why">
+      <div class="container problem-grid">
+        <div>
+          <div class="eyebrow">The real problem</div>
+          <h2>Your business is growing. But it is getting harder to run.</h2>
+          <p class="lead">Most industrial businesses do not lack effort. They depend on a few capable people carrying too much of the system in their heads.</p>
         </div>
-        <div class="col-lg-6">
-          <div class="ui-card">
-            <p class="ui-card-title">What that feels like</p>
-            <ul class="ui-list">
-              <li>Every decision lands back on you.</li>
-              <li>Good people are tired and stretched.</li>
-              <li>Nothing runs the same way twice.</li>
-            </ul>
-            <p class="ui-card-footnote mb-0">The pressure always goes back to the owner.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- The Promise -->
-  <section class="section-pad section-rule section-alt">
-    <div class="container-content text-center">
-      <h2 class="section-title">Vosh changes that.</h2>
-      <p class="section-subtitle">We help businesses run on structure instead of memory, effort, or heroics.</p>
-      <div class="promise-grid">
-        <div class="promise-pill">Simple rules</div>
-        <div class="promise-pill">Clear ownership</div>
-        <div class="promise-pill">Reliable follow-through</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Outcomes -->
-  <section class="section-pad">
-    <div class="container-content text-center">
-      <h2 class="section-title">After Vosh</h2>
-      <div class="row g-4 outcome-grid">
-        <div class="col-md-6 col-lg-3">
-          <div class="ui-card ui-card-tight">
-            <p class="ui-card-title">Work is predictable</p>
-            <p class="ui-card-body mb-0">The day runs the same way, even when you step away.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="ui-card ui-card-tight">
-            <p class="ui-card-title">Information is visible</p>
-            <p class="ui-card-body mb-0">You see what matters before it becomes a problem.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="ui-card ui-card-tight">
-            <p class="ui-card-title">People take ownership</p>
-            <p class="ui-card-body mb-0">Your team knows what “good” looks like and delivers it.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="ui-card ui-card-tight">
-            <p class="ui-card-title">Leadership gains perspective</p>
-            <p class="ui-card-body mb-0">You can lead the business instead of chasing it.</p>
-          </div>
+        <div class="pain-list">
+          <article class="pain"><span class="pain-number">01</span><h3>Everything comes back to you</h3><p>Decisions, exceptions, priorities, and client issues all land with the owner.</p></article>
+          <article class="pain"><span class="pain-number">02</span><h3>Good people are stretched</h3><p>Strong employees compensate for unclear processes instead of owning defined outcomes.</p></article>
+          <article class="pain"><span class="pain-number">03</span><h3>Execution changes every week</h3><p>Nothing runs the same way twice, creating urgency without real control.</p></article>
+          <article class="pain"><span class="pain-number">04</span><h3>Data arrives after the damage</h3><p>Leadership sees performance late, when the problem is already expensive.</p></article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- How It Works -->
-  <section class="section-pad section-rule">
-    <div class="container-content">
-      <div class="row g-4 align-items-start">
-        <div class="col-lg-4">
-          <h2 class="section-title">How it works</h2>
-          <p class="section-subtitle mb-0">We define clear rules, build simple systems, and install a rhythm the business can sustain.</p>
-        </div>
-        <div class="col-lg-8">
-          <div class="process-grid">
-            <div class="ui-card ui-card-tight">
-              <div class="step-badge">1</div>
-              <p class="ui-card-title">Define the rules</p>
-              <p class="ui-card-body mb-0">We agree on what “good” looks like across the floor.</p>
-            </div>
-            <div class="ui-card ui-card-tight">
-              <div class="step-badge">2</div>
-              <p class="ui-card-title">Build simple systems</p>
-              <p class="ui-card-body mb-0">We document the essentials so nothing lives in one person’s head.</p>
-            </div>
-            <div class="ui-card ui-card-tight">
-              <div class="step-badge">3</div>
-              <p class="ui-card-title">Install the rhythm</p>
-              <p class="ui-card-body mb-0">Weekly check-ins keep everything steady and owned.</p>
-            </div>
-          </div>
+    <section class="section section-soft">
+      <div class="container">
+        <div class="eyebrow">What changes after Vosh</div>
+        <h2>Execution becomes a capability,<br>not a heroic effort.</h2>
+        <div class="outcomes">
+          <article class="outcome"><span class="number">01</span><h3>Work becomes predictable</h3><p>The day runs consistently, even when a key person is not present.</p></article>
+          <article class="outcome"><span class="number">02</span><h3>Information becomes visible</h3><p>You see what matters before it turns into a customer or cash problem.</p></article>
+          <article class="outcome"><span class="number">03</span><h3>People own outcomes</h3><p>Your team knows what good looks like and has a clear lane to deliver it.</p></article>
+          <article class="outcome"><span class="number">04</span><h3>Leadership gains altitude</h3><p>You lead the company instead of chasing the next operational fire.</p></article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Authority -->
-  <section class="section-pad">
-    <div class="container-content">
-      <div class="row g-4 align-items-start">
-        <div class="col-lg-5">
-          <h2 class="section-title">Why Vosh</h2>
-          <p class="section-subtitle">Vosh is built by an industrial operator with over a decade of hands-on experience across the U.S., Mexico, and Europe.</p>
-        </div>
-        <div class="col-lg-7">
-          <div class="contrast-grid">
-            <div class="ui-card ui-card-tight">
-              <p class="ui-card-title">What we are</p>
-              <ul class="ui-list mb-0">
-                <li>Operators who work in real plants.</li>
-                <li>Partners who stay close to the floor.</li>
-              </ul>
-            </div>
-            <div class="ui-card ui-card-tight">
-              <p class="ui-card-title">What we are not</p>
-              <ul class="ui-list mb-0">
-                <li>Not a software vendor.</li>
-                <li>Not a theory-driven consultant.</li>
-              </ul>
-            </div>
-          </div>
+    <section class="section" id="systems">
+      <div class="container">
+        <div class="eyebrow">What we build</div>
+        <h2>The operating system behind sustainable growth.</h2>
+        <p class="lead">Vosh works where commercial growth, operational reality, and management discipline meet. The goal is not more tools. It is a business that runs with clarity.</p>
+        <div class="systems">
+          <article class="system"><div class="system-icon">01</div><h3>Commercial discipline</h3><p>Define target accounts, sales process, ownership, pipeline rhythm, and the commercial standards that turn activity into reliable revenue.</p></article>
+          <article class="system"><div class="system-icon">02</div><h3>Management visibility</h3><p>Build the simple scorecards, dashboards, and weekly reviews that give leadership a live view of decisions and performance.</p></article>
+          <article class="system"><div class="system-icon">03</div><h3>Execution infrastructure</h3><p>Clarify critical processes, handoffs, operating rules, and accountability so the team can deliver without improvising every day.</p></article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Final CTA -->
-  <section class="section-pad section-rule">
-    <div class="container-content text-center">
-      <h2 class="section-title">If your company is growing but feels harder to run every year, let’s talk.</h2>
-      <a href="contact.html" class="btn btn-primary">Schedule a conversation</a>
-    </div>
-  </section>
+    <section class="section section-soft" id="method">
+      <div class="container method-grid">
+        <div>
+          <div class="eyebrow">How it works</div>
+          <h2>Build what the business can actually sustain.</h2>
+          <p class="lead">No generic transformation program. We work from the real operating constraints of your company and install the minimum effective structure needed to move forward.</p>
+        </div>
+        <div class="process">
+          <article class="step"><div class="step-num">01</div><div><h3>Define the rules</h3><p>Establish what “good” looks like across priorities, roles, client response, commercial activity, and operational decisions.</p></div></article>
+          <article class="step"><div class="step-num">02</div><div><h3>Build simple systems</h3><p>Document essentials, create visibility, and remove dependency on memory, individual effort, or informal workarounds.</p></div></article>
+          <article class="step"><div class="step-num">03</div><div><h3>Install the rhythm</h3><p>Use practical weekly management cadence to keep ownership clear, track commitments, and sustain progress.</p></div></article>
+        </div>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+    <section class="section">
+      <div class="container">
+        <div class="quote">
+          <p>Vosh is not a software vendor or a theory-driven consultancy. We are operators who understand what it takes to make growth work on the floor, with the customer, and across the border.</p>
+          <small>Built on hands-on industrial experience across the U.S., Mexico, and Europe.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container">
+        <div>
+          <div class="eyebrow">Start with the real constraint</div>
+          <h2>If growth is making your company harder to run, let’s find out what needs to change.</h2>
+        </div>
+        <a class="btn btn-primary" href="mailto:info@jvosh.com?subject=Vosh%20Business%20Conversation">Start a conversation <span>→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <div class="container">
-      <p>&copy; 2025 Vosh Business Solutions</p>
-      <p>Contact: <a class="link-inverse" href="tel:+19153148807">+1 915 314 8807</a> · <a class="link-inverse" href="mailto:info@jvosh.com">info@jvosh.com</a></p>
+      <div class="footer-grid">
+        <div><div class="brand brand-logo footer-logo"><span class="brand-mark" aria-hidden="true"></span><span class="brand-copy">VOSH<small>BUSINESS SOLUTIONS</small></span></div><p style="margin-top:16px;max-width:330px">Clear operating systems, disciplined execution, and sustainable growth for industrial businesses.</p></div>
+        <div><h4>Explore</h4><a href="#why">Why Vosh</a><a href="#systems">What we build</a><a href="#method">How it works</a></div>
+        <div><h4>Contact</h4><a href="mailto:info@jvosh.com">info@jvosh.com</a><a href="tel:+19153148807">+1 915 314 8807</a><p>U.S. • Mexico • Cross-border</p></div>
+      </div>
+      <div class="legal"><span>© <span id="year"></span> Vosh Business Solutions LLC</span><span>Built for industrial businesses.</span></div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const nav = document.getElementById('site-nav');
+    const navToggle = document.querySelector('.nav-toggle');
+    const closeNav = () => {
+      nav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open navigation');
+    };
+    navToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') closeNav();
+    });
+  </script>
 </body>
 </html>
