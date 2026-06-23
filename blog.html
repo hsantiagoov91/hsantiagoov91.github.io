@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;600;700;800;900&family=Red+Hat+Text:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/blog.css" />
+  <meta name="description" content="Practical ideas from Vosh on industrial operating systems, business intelligence, commercial discipline, and strategic growth." />
+  <title>Vosh Blog | Industrial Operating Systems & Growth</title>
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>Industrial operating systems for companies ready to scale.</span><span>U.S. • Mexico • Cross-border execution</span></div></div>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="Vosh Business Solutions home"><img class="brand-icon" src="assets/favicon.ico" alt="" aria-hidden="true"><span>VOSH<small>BUSINESS SOLUTIONS</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
+      <nav id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#why">Why Vosh</a>
+        <a href="index.html#systems">What We Build</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+        <a href="https://calendar.app.google/VTpBsSxqu966WLwf6" class="btn btn-primary">Start a conversation <span>→</span></a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="blog-hero">
+      <div class="container">
+        <div class="eyebrow">Field notes from Vosh</div>
+        <h1>Practical ideas for calmer industrial growth.</h1>
+        <p class="lead">Clear thinking on business intelligence, commercial discipline, operating rhythm, and the systems that help growing companies execute without heroics.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow">Latest article</div>
+        <article class="post-card">
+          <div class="post-number">01</div>
+          <div>
+            <div class="post-meta">BRM • Business intelligence • Strategic growth</div>
+            <h2>From scattered workflows to strategic growth: the BRM customer journey</h2>
+            <p>What changes when a growing company brings its customer, commercial, and operational information into one working system—and then uses that foundation to make better decisions.</p>
+            <a class="read-link" href="blog-brm-customer-journey.html">Read the article <span>→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="section section-soft">
+      <div class="container">
+        <div class="eyebrow">What we explore</div>
+        <h2 class="section-heading">Where growth meets execution.</h2>
+        <p class="section-lead">The blog focuses on the practical systems behind visible performance and sustainable industrial growth.</p>
+        <div class="topics">
+          <article class="topic"><span>01</span><h3>Commercial discipline</h3><p>Pipeline clarity, account focus, ownership, and the management rhythm behind reliable revenue.</p></article>
+          <article class="topic"><span>02</span><h3>Business intelligence</h3><p>Turning operational and commercial data into decisions people can make before problems become expensive.</p></article>
+          <article class="topic"><span>03</span><h3>Execution systems</h3><p>Simple processes, handoffs, automation, and accountability that reduce dependence on individual heroics.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="cta">
+      <div class="container"><h2>Want to see where your operating system is holding growth back?</h2><a class="btn btn-primary" href="https://calendar.app.google/VTpBsSxqu966WLwf6">Start a conversation <span>→</span></a></div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="brand footer-logo"><img class="brand-icon" src="assets/favicon.ico" alt="" aria-hidden="true"><span>VOSH<small>BUSINESS SOLUTIONS</small></span></div><p style="margin-top:16px;max-width:330px">Clear operating systems, disciplined execution, and sustainable growth for industrial businesses.</p></div>
+        <div><h4>Explore</h4><a href="index.html">Home</a><a href="index.html#systems">What we build</a><a href="blog.html">Blog</a></div>
+        <div><h4>Contact</h4><a href="mailto:info@jvosh.com">info@jvosh.com</a><a href="tel:+19153148807">+1 915 314 8807</a><p>U.S. • Mexico • Cross-border</p></div>
+      </div>
+      <div class="legal"><span>© <span id="year"></span> Vosh Business Solutions LLC</span><span>Built for industrial businesses.</span></div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const nav = document.getElementById('site-nav');
+    const navToggle = document.querySelector('.nav-toggle');
+    const closeNav = () => { nav.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); navToggle.setAttribute('aria-label','Open navigation'); };
+    navToggle.addEventListener('click', () => { const isOpen = nav.classList.toggle('open'); navToggle.setAttribute('aria-expanded',String(isOpen)); navToggle.setAttribute('aria-label',isOpen ? 'Close navigation' : 'Open navigation'); });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click',closeNav));
+    document.addEventListener('keydown',event => { if(event.key === 'Escape') closeNav(); });
+  </script>
+</body>
+</html>
