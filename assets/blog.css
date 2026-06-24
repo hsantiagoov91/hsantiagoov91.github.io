@@ -44,6 +44,7 @@ h1,h2,h3,p{margin-top:0}
 .section-heading{font-size:clamp(2rem,4vw,3rem);line-height:1.08;letter-spacing:-.04em;margin-bottom:18px}
 .section-lead{max-width:650px;color:var(--muted);font-size:1.08rem}
 .post-card{margin-top:36px;border:1px solid var(--line);border-radius:20px;background:#fff;padding:38px;display:grid;grid-template-columns:180px 1fr;gap:34px;box-shadow:var(--shadow)}
+.post-card + .post-card{margin-top:22px}
 .post-number{font-family:"Red Hat Display",sans-serif;font-weight:900;font-size:5rem;line-height:.85;letter-spacing:-.08em;color:var(--red)}
 .post-logo{display:block;width:180px;max-width:100%;height:auto;margin-top:5px}
 .post-meta{font-size:.75rem;letter-spacing:.11em;text-transform:uppercase;font-weight:800;color:var(--red);margin-bottom:12px}
